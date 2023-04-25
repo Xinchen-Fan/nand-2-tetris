@@ -15,22 +15,27 @@ zip -r project0.zip file.txt
 ```
 
 
-## Project 01
+## Project 01 Boolean Logic
 Building elementary logic gates like And, Or, Not, Multiplexor, and more
 
-## Project 02
+- primitive elements: Nand
+- Not: out = Nand(in, in)
+- And: out = Not(Nand(a,b))
+- Or: out = Nand(Not(a), Not(b))
+
+## Project 02 Boolean Arithmetic
 Building a family of adder chips, culminating in the construction of an Arithmetic Logic Unit (ALU)
 
-## Project 03
+## Project 03 Sequential Logic
 Building registers and memory units, culminating in the construction of a Random Access Memory (RAM)
 
-## Project 04
+## Project 04 Machine Language
 Learning a machine language and using it to write some illustrative low-level programs
 
-## Project 05
+## Project 05 Computer Architecture
 Using the chipset built in projects 1-3 to build a Central Processing Unit (CPU) and a hardware platform capable of executing programs written in the machine language introduced in project 4
 
 
-## Project 06
+## Project 06 Assembler
 Developing an assembler, i.e. a capability to translate programs written in symbolic machine language into binary, executable code.
 
