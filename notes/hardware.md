@@ -24,6 +24,7 @@ Building elementary logic gates like And, Or, Not, Multiplexor, and more
 - Or: out = Nand(Not(a), Not(b))
 - Xor: out = Or(And(a,Not(b)),And(Not(a),b))
 - Mux: out = Or(And(sel,b),And(Not(sel),a))
+- Not16: out[i] = Not(in[i])
 
 ## Project 02 Boolean Arithmetic
 Building a family of adder chips, culminating in the construction of an Arithmetic Logic Unit (ALU)
