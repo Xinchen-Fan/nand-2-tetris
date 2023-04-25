@@ -1,6 +1,5 @@
 # nand-2-tetris
 All course resources and my project for Nand2Tetris
-- purpose: build a complete general purpose working computer from the ground up, hardware and software
 
 ## Resources
 - official website - [Nand2Tetris](https://www.nand2tetris.org/)
