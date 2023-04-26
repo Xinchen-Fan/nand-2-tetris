@@ -18,6 +18,8 @@ zip -r project0.zip file.txt
 ## Project 01 Boolean Logic
 Building elementary logic gates like And, Or, Not, Multiplexor, and more
 
+When loaded into the supplied Hardware Simulator, your chip design (modified `.hdl` program), tested on the supplied `.tst` script, should produce the outputs listed in the supplied `.cmp` file. If that is not the case, the simulator will let you know. This contract must be satisfied for each chip listed above, except for the Nand chip, which is considered primitive, and thus there is no need to implement it.
+
 - primitive elements: Nand
 - Not: out = Nand(in, in)
 - And: out = Not(Nand(a,b))
