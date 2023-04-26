@@ -26,7 +26,7 @@ Building elementary logic gates like And, Or, Not, Multiplexor, and more
 - Mux: out = Or(And(sel,b),And(Not(sel),a))
 - Muiti-bit Not,And,Or,Mux is similar
 - Or8Way: tree like structure
-- Demultiplexor(DMux): process 2 channels independently
+- Demultiplexor(DMux, DMux4Way, DMux8Way): process channels independently
 
 ## Project 02 Boolean Arithmetic
 Building a family of adder chips, culminating in the construction of an Arithmetic Logic Unit (ALU)
