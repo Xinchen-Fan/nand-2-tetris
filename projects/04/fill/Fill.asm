@@ -12,3 +12,63 @@
 // the screen should remain fully clear as long as no key is pressed.
 
 // Put your code here.
+
+// n = 8192
+@8192
+D=A
+@n
+M=D
+
+(GETKBD)
+    @i
+    M=0;
+    @SCREEN 
+    D=A 
+    @address
+    M=D
+    @KBD
+    D=M
+    @BLACK
+    D;JNE
+    @WHITE 
+    D;JEQ
+    @GETKBD
+    0;JMP
+
+(BLACK)
+    @i 
+    D=M 
+    @n
+    D=D-M 
+    @GETKBD
+    D;JGE
+
+    @address
+    A=M 
+    M=-1
+
+    @i
+    M=M+1
+    @address
+    M=M+1
+    @BLACK
+    0;JMP
+
+
+(WHITE)
+    @i 
+    D=M 
+    @n
+    D=D-M 
+    @GETKBD
+    D;JGE
+
+    @address
+    M=0
+
+    @i
+    M=M+1
+    @address
+    M=M+1
+    @WHITE
+    0;JMP

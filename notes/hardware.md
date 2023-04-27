@@ -54,7 +54,8 @@ Building registers and memory units, culminating in the construction of a Random
 ## Project 04 Machine Language
 Learning a machine language and using it to write some illustrative low-level programs
 
-- Mult: use loop to accumulate the result
+- Mult: convert multiply to add through loop
+- 
 
 
 ## Project 05 Computer Architecture
