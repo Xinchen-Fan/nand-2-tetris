@@ -35,7 +35,7 @@ Building a family of adder chips, culminating in the construction of an Arithmet
 - FullAdder: sum = Xor(c,Xor(a,b)), carry = Or(And(a,b), And(c,Xor(a,b)))
 - Add16: connect FullAdders in sequence
 - Inc16: out = Add16(in,1)
-- ALU: combine the chips designed before
+- ALU: combine the chips designed before (The working principle of Hack ALU can be referred to in the lecture)
 
 ## Project 03 Sequential Logic
 Building registers and memory units, culminating in the construction of a Random Access Memory (RAM)
