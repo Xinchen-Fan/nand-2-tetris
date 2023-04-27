@@ -42,7 +42,8 @@ Building a family of adder chips, culminating in the construction of an Arithmet
 ## Project 03 Sequential Logic
 Building registers and memory units, culminating in the construction of a Random Access Memory (RAM)
 
-- Bit: a multiplexor to choose the input (sel=load)
+- Bit: a multiplexer to choose the input (sel=load)
+- Register: combine 16 DFF with load (Bit)
 
 ## Project 04 Machine Language
 Learning a machine language and using it to write some illustrative low-level programs
