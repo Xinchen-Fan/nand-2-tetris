@@ -18,6 +18,8 @@ zip -r project0.zip file.txt
 ## Project 01 Boolean Logic
 Building elementary logic gates like And, Or, Not, Multiplexor, and more
 
+To run Hardware Simulator, first make `HardwareSimulator.sh` executable by `chmod +x HardwareSimulator.sh`
+
 - primitive elements: Nand
 - Not: out = Nand(in, in)
 - And: out = Not(Nand(a,b))
@@ -40,6 +42,7 @@ Building a family of adder chips, culminating in the construction of an Arithmet
 ## Project 03 Sequential Logic
 Building registers and memory units, culminating in the construction of a Random Access Memory (RAM)
 
+- Bit: a multiplexor to choose the input (sel=load)
 
 ## Project 04 Machine Language
 Learning a machine language and using it to write some illustrative low-level programs
