@@ -32,6 +32,7 @@ Building elementary logic gates like And, Or, Not, Multiplexor, and more
 Building a family of adder chips, culminating in the construction of an Arithmetic Logic Unit (ALU)
 
 - HalfAdder: sum = Xor(a,b), carry = And(a,b) 
+- FullAdder: sum = Xor(c,Xor(a,b)), carry = Or(And(a,b), And(c,Xor(a,b)))
 
 ## Project 03 Sequential Logic
 Building registers and memory units, culminating in the construction of a Random Access Memory (RAM)
