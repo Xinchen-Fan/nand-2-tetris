@@ -47,6 +47,7 @@ Building registers and memory units, culminating in the construction of a Random
 - RAM8: instantiate 8 16-bit Rgisters and use Multiplexer to control read/write according to address
 - RAM64: instantiate 8 RAM8 and use Multiplexer to control read/write according to address(lower bits for Register, and higher bits for RAM8) 
 - RAM512, RAM4K, RAM16K: Similarly, these chips are designed like a Russian doll system
+- PC: change DFF to always load; use Mux16 to select out[t+1]
 
 
 ## Project 04 Machine Language
