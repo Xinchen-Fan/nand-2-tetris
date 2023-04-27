@@ -15,18 +15,6 @@
 @R2
 M=0
 
-// if R0 == 0: r2 = 0 
-@R0
-D=M
-@END
-D;JEQ
-
-// if R1 == 0: r2 = 0
-@R1
-D=M
-@END
-D;JEQ
-
 // n = RAM[1]
 @R1
 D=M
@@ -39,9 +27,9 @@ D=M
 @k
 M=D
 
-// i = 1
+// i = 0
 @i 
-M=1
+M=0
 
 (LOOP)
     @i
@@ -49,7 +37,7 @@ M=1
     @n
     D=D-M
     @END
-    D;JGT // if i > n, jump to END
+    D;JGE // if i > n, jump to END
 
     @R2 
     D=M
