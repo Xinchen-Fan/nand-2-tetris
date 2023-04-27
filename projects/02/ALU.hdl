@@ -43,4 +43,31 @@ CHIP ALU {
 
     PARTS:
    // Put you code here:
+   // deal with x: zx, nx
+    Mux16(a=x, b[0..15]=false, sel=zx, out=xNew1);
+    Not16(in=xNew1, out=notxNew1);
+    Mux16(a=xNew1, b=notxNew1, sel=nx, out=xNew2);
+
+    // deal with y: zy, ny
+    Mux16(a=y, b[0..15]=false, sel=zy, out=yNew1);
+    Not16(in=yNew1, out=notyNew1);
+    Mux16(a=yNew1, b=notyNew1, sel=ny, out=yNew2);
+
+    // get out: out = {outBufSign, outBufHigh, outBufLow}
+    Add16(a=xNew2, b=yNew2, out=sumTmp);
+    And16(a=xNew2, b=yNew2, out=andTmp);
+    Mux16(a=andTmp, b=sumTmp, sel=f, out=outTmp);
+    Not16(in=outTmp, out=notoutTmp);
+    Mux16(a=outTmp, b=notoutTmp, sel=no, out[15]=outBufSign, out[0..7]=outBufLow, out[8..14]=outBufHigh);
+    And16(a[15]=outBufSign, a[0..7]=outBufLow, a[8..14]=outBufHigh, b[0..15]=true, out=out);
+
+    // get zr
+    Or8Way(in=outBufLow, out=zrTmp1);
+    Or8Way(in[0..6]=outBufHigh, in[7]=outBufSign, out=zrTmp2);
+    Or(a=zrTmp1, b=zrTmp2, out=notzr);
+    Not(in=notzr, out=zr);
+
+    // get ng
+    Mux(a=false, b=true, sel=outBufSign, out=ng);
+
 }
