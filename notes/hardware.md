@@ -33,7 +33,7 @@ Building a family of adder chips, culminating in the construction of an Arithmet
 
 - HalfAdder: sum = Xor(a,b), carry = And(a,b) 
 - FullAdder: sum = Xor(c,Xor(a,b)), carry = Or(And(a,b), And(c,Xor(a,b)))
-- Add16: connect FullAdders in sequence
+- Add16: connect FullAdders in sequence (can be optimized)
 - Inc16: out = Add16(in,1)
 - ALU: combine the chips designed before (The working principle of Hack ALU can be referred to in the lecture)
 
