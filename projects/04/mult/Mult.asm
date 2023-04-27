@@ -10,3 +10,58 @@
 // R0 >= 0, R1 >= 0, and R0*R1 < 32768.
 
 // Put your code here.
+
+// Ram[2] = 0
+@R2
+M=0
+
+// if R0 == 0: r2 = 0 
+@R0
+D=M
+@END
+D;JEQ
+
+// if R1 == 0: r2 = 0
+@R1
+D=M
+@END
+D;JEQ
+
+// n = RAM[1]
+@R1
+D=M
+@n 
+M=D
+
+// k = RAM[0]
+@R0
+D=M
+@k
+M=D
+
+// i = 1
+@i 
+M=1
+
+(LOOP)
+    @i
+    D=M
+    @n
+    D=D-M
+    @END
+    D;JGT // if i > n, jump to END
+
+    @R2 
+    D=M
+    @k
+    D=D+M
+    @R2
+    M=D
+    @i 
+    M=M+1
+    @LOOP
+    0;JMP
+
+(END)
+    @END
+    0;JMP

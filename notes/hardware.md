@@ -54,6 +54,8 @@ Building registers and memory units, culminating in the construction of a Random
 ## Project 04 Machine Language
 Learning a machine language and using it to write some illustrative low-level programs
 
+- Mult: use loop to accumulate the result
+
 
 ## Project 05 Computer Architecture
 Using the chipset built in projects 1-3 to build a Central Processing Unit (CPU) and a hardware platform capable of executing programs written in the machine language introduced in project 4
