@@ -20,7 +20,7 @@ Building elementary logic gates like And, Or, Not, Multiplexor, and more
 
 To run Hardware Simulator, first make `HardwareSimulator.sh` executable by `chmod +x HardwareSimulator.sh`
 
-- primitive elements: Nand
+- primitive element: Nand
 - Not: out = Nand(in, in)
 - And: out = Not(Nand(a,b))
 - Or: out = Nand(Not(a), Not(b))
@@ -42,6 +42,7 @@ Building a family of adder chips, culminating in the construction of an Arithmet
 ## Project 03 Sequential Logic
 Building registers and memory units, culminating in the construction of a Random Access Memory (RAM)
 
+- primitive element: DFF
 - Bit: a multiplexer to choose the input (sel=load)
 - Register: combine 16 DFF with load (Bit)
 - RAM8: instantiate 8 16-bit Rgisters and use Multiplexer to control read/write according to address
@@ -52,6 +53,7 @@ Building registers and memory units, culminating in the construction of a Random
 
 ## Project 04 Machine Language
 Learning a machine language and using it to write some illustrative low-level programs
+
 
 ## Project 05 Computer Architecture
 Using the chipset built in projects 1-3 to build a Central Processing Unit (CPU) and a hardware platform capable of executing programs written in the machine language introduced in project 4
