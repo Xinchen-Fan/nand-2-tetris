@@ -45,6 +45,7 @@ Building registers and memory units, culminating in the construction of a Random
 - Bit: a multiplexer to choose the input (sel=load)
 - Register: combine 16 DFF with load (Bit)
 - RAM8: instantiate 8 16-bit Rgisters and use Multiplexer to control read/write according to address
+- RAM64: instantiate 8 RAM8 and use Multiplexer to control read/write according to address(lower bits for Register, and higher bits for RAM8) 
 
 ## Project 04 Machine Language
 Learning a machine language and using it to write some illustrative low-level programs
