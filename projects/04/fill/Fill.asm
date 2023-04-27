@@ -64,6 +64,7 @@ M=D
     D;JGE
 
     @address
+    A=M
     M=0
 
     @i
