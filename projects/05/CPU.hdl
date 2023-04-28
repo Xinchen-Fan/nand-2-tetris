@@ -40,8 +40,37 @@ CHIP CPU {
 
     PARTS:
     // Put your code here:
-    ALU(x= ,y= ,zx= ,nx= ,zy= ,ny= ,f= ,no= ,out= ,zr= ,ng= ); // ALU
-    PC(in= ,load= ,inc= ,reset= ,out= ); // PC
-    ARegister(in= ,load= ,out= ); // built-in address register
-    DRegister(in= ,load= ,out= ); // built-in data register
+    And(a=instruction[15], b=instruction[5], out=d1);
+    And(a=instruction[15], b=instruction[4], out=d2);
+    And(a=instruction[15], b=instruction[3], out=d3, out=writeM); // get writeM
+    And(a=instruction[15], b=instruction[2], out=j1);
+    And(a=instruction[15], b=instruction[1], out=j2);
+    And(a=instruction[15], b=instruction[0], out=j3);
+
+    ALU(x=xALU, y=yALU, zx=instruction[11], nx=instruction[10], zy=instruction[9], 
+        ny=instruction[8], f=instruction[7], no=instruction[6], out=outM, 
+        zr=zrALU, ng=ngALU, out=alu2Reg); // ALU
+    
+    Not(in=instruction[15], out=notMSB);
+    Or(a=d1, b=notMSB, out=loadAReg);
+    ARegister(in=inAReg, load=loadAReg, out=outAReg); // built-in address register
+
+    DRegister(in=alu2Reg, load=d2, out=xALU); // built-in data register
+
+    Mux16(a=instruction, b=alu2Reg, sel=instruction[15], out=inAReg); // choose AReg input
+    Mux16(a=outAReg, b=inM, sel=instruction[12], out=yALU); // choose ALU input
+
+    And16(a=outAReg, b[0..15]=true, out[0..14]=addressM); // get addressM
+
+    Not(in=zrALU, out=notzrALU);
+    Not(in=ngALU, out=notngALU);
+    And(a=j1, b=ngALU, out=tmp1);
+    And(a=j2, b=zrALU, out=tmp2);
+    And(a=j3, b=notzrALU, out=tmp31);
+    And(a=tmp31, b=notngALU, out=tmp3);
+    Or(a=tmp1, b=tmp2, out=tmp4);
+    Or(a=tmp3, b=tmp4, out=jump);
+
+    Not(in=jump, out=notJump);
+    PC(in=outAReg, load=jump, inc=notJump, reset=reset, out[0..14]=pc); // PC
 }
