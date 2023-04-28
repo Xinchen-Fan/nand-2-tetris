@@ -63,6 +63,7 @@ Using the chipset built in projects 1-3 to build a Central Processing Unit (CPU)
 
 - `Memory`: Combine RAM16K, SCreen and Keyboard, read&write like a common RAM
 - `CPU`: implement the CPU's data path and control path seperately according to the ISA manual
+- `Computer`: connect ROM32K, CPU and Memory
 
 ## Project 06 Assembler
 Developing an assembler, i.e. a capability to translate programs written in symbolic machine language into binary, executable code.
