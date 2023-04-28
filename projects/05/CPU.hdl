@@ -40,4 +40,8 @@ CHIP CPU {
 
     PARTS:
     // Put your code here:
+    ALU(x= ,y= ,zx= ,nx= ,zy= ,ny= ,f= ,no= ,out= ,zr= ,ng= ); // ALU
+    PC(in= ,load= ,inc= ,reset= ,out= ); // PC
+    ARegister(in= ,load= ,out= ); // built-in address register
+    DRegister(in= ,load= ,out= ); // built-in data register
 }
