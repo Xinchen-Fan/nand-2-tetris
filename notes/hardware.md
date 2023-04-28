@@ -20,42 +20,42 @@ Building elementary logic gates like And, Or, Not, Multiplexor, and more
 
 To run Hardware Simulator, first make `HardwareSimulator.sh` executable by `chmod +x HardwareSimulator.sh`
 
-- primitive element: Nand
-- Not: out = Nand(in, in)
-- And: out = Not(Nand(a,b))
-- Or: out = Nand(Not(a), Not(b))
-- Xor: out = Or(And(a,Not(b)),And(Not(a),b))
-- Mux: out = Or(And(sel,b),And(Not(sel),a))
+- primitive element: `Nand`
+- `Not`: out = Nand(in, in)
+- `And`: out = Not(Nand(a,b))
+- `Or`: out = Nand(Not(a), Not(b))
+- `Xor`: out = Or(And(a,Not(b)),And(Not(a),b))
+- `Mux`: out = Or(And(sel,b),And(Not(sel),a))
 - Muiti-bit Not,And,Or,Mux is similar
-- Or8Way: tree like structure
-- Demultiplexor(DMux, DMux4Way, DMux8Way, Mux4Way16, Mux8Way16): process channels independently
+- `Or8Way`: tree like structure
+- Demultiplexor(`DMux`, `DMux4Way`, `DMux8Way`, `Mux4Way16`, `Mux8Way16`): process channels independently
 
 ## Project 02 Boolean Arithmetic
 Building a family of adder chips, culminating in the construction of an Arithmetic Logic Unit (ALU)
 
-- HalfAdder: sum = Xor(a,b), carry = And(a,b) 
-- FullAdder: sum = Xor(c,Xor(a,b)), carry = Or(And(a,b), And(c,Xor(a,b)))
-- Add16: connect FullAdders in sequence (can be optimized)
-- Inc16: out = Add16(in,1)
-- ALU: combine the chips designed before (The working principle of Hack ALU can be referred to in the lecture)
+- `HalfAdder`: sum = Xor(a,b), carry = And(a,b) 
+- `FullAdder`: sum = Xor(c,Xor(a,b)), carry = Or(And(a,b), And(c,Xor(a,b)))
+- `Add16`: connect FullAdders in sequence (can be optimized)
+- `Inc16`: out = Add16(in,1)
+- `ALU`: combine the chips designed before (The working principle of Hack ALU can be referred to in the lecture)
 
 ## Project 03 Sequential Logic
 Building registers and memory units, culminating in the construction of a Random Access Memory (RAM)
 
-- primitive element: DFF
-- Bit: a multiplexer to choose the input (sel=load)
-- Register: combine 16 DFF with load (Bit)
-- RAM8: instantiate 8 16-bit Rgisters and use Multiplexer to control read/write according to address
-- RAM64: instantiate 8 RAM8 and use Multiplexer to control read/write according to address(lower bits for Register, and higher bits for RAM8) 
-- RAM512, RAM4K, RAM16K: Similarly, these chips are designed like a Russian doll system
-- PC: change DFF to always load; use Mux16 to select out[t+1]
+- primitive element: `DFF`
+- `Bit`: a multiplexer to choose the input (sel=load)
+- `Register`: combine 16 DFF with load (Bit)
+- `RAM8`: instantiate 8 16-bit Rgisters and use Multiplexer to control read/write according to address
+- `RAM64`: instantiate 8 RAM8 and use Multiplexer to control read/write according to address(lower bits for Register, and higher bits for RAM8) 
+- `RAM512`, `RAM4K`, `RAM16K`: Similarly, these chips are designed like a Russian doll system
+- `PC`: change DFF to always load; use Mux16 to select out[t+1]
 
 
 ## Project 04 Machine Language
 Learning a machine language and using it to write some illustrative low-level programs
 
-- Mult: convert multiply to add through loop
-- 
+- `Mult`: convert multiply to add through loop
+- `Fill`: set the register at address to –1 through pointer
 
 
 ## Project 05 Computer Architecture
