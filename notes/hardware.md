@@ -5,7 +5,6 @@ Target: build a complete general purpose working computer from the ground up, ha
 
 
 ## Project 00
-
 Download the `Nand2Tetris Software Suite` to computer. The software suite includes all the software tools and project files that will be used throughout the course. After downloading, locate `file.txt` in the `nand2tetris/projects/00` folder on your computer. There is no need to understand or modify the contents of this file. Compress the file into a zip file named `project0.zip`.
 
 Use the following bash command to compress `file.txt` to `project0.zip`
@@ -66,5 +65,5 @@ Using the chipset built in projects 1-3 to build a Central Processing Unit (CPU)
 - `Computer`: connect ROM32K, CPU and Memory
 
 ## Project 06 Assembler
-Developing an assembler, i.e. a capability to translate programs written in symbolic machine language into binary, executable code.
+Developing an assembler, i.e. a capability to translate programs written in symbolic machine language into binary, executable code
 
