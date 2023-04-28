@@ -61,6 +61,7 @@ Learning a machine language and using it to write some illustrative low-level pr
 ## Project 05 Computer Architecture
 Using the chipset built in projects 1-3 to build a Central Processing Unit (CPU) and a hardware platform capable of executing programs written in the machine language introduced in project 4
 
+- `Memory`: Combine RAM16K, SCreen and Keyboard, read&write like a common RAM
 
 ## Project 06 Assembler
 Developing an assembler, i.e. a capability to translate programs written in symbolic machine language into binary, executable code.
