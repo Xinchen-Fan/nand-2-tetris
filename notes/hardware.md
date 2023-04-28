@@ -55,7 +55,7 @@ Building registers and memory units, culminating in the construction of a Random
 Learning a machine language and using it to write some illustrative low-level programs
 
 - `Mult`: convert multiply to add through loop
-- `Fill`: set the register at address to –1 through pointer
+- `Fill`: set the register at address to –1 through pointer (select 'no animation' in CPUEmulator to test this program)
 
 
 ## Project 05 Computer Architecture
