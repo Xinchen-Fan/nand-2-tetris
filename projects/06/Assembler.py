@@ -13,10 +13,23 @@ def load_asm_file(file_path, asm_codes): # load contents in .asm file and prepro
             if (len(content) != 0): 
                 asm_codes.append(content)
 
-def translate(asm_codes, binary_codes):
-    pass
+def translate_a(a_command):
+    binary_code = '0000000000000000'
+    return binary_code
 
-def save_binary_codes(binary_codes):
+def translate_c(c_command):
+    binary_code = '1111111111111111'
+    return binary_code
+
+def parser(asm_codes, binary_codes):
+    for item in asm_codes:
+        if (item[0] == '@'):    # A-command
+            binary_codes.append(translate_a(item))
+        else:                   # C-command
+            binary_codes.append(translate_c(item))
+
+
+def save_bin_file(binary_codes):
     binary_file = sys.argv[1][:-4] + ".hack"
     with open(binary_file,'w') as file:
         for item in binary_codes:
@@ -34,9 +47,9 @@ def main():
     binary = []                                         # machine language 
     load_asm_file(file_path=asm_file, asm_codes=asm)    # load .asm file and preprocess
     print_codes(codes=asm)                              # for debug
-    translate(asm_codes=asm, binary_codes=binary)       # translate assembly language to machine language
+    parser(asm_codes=asm, binary_codes=binary)          # translate assembly language to machine language
     print_codes(binary)                                 # for debug
-    save_binary_codes(binary_codes=binary)              # save machine language to .hack file
+    save_bin_file(binary_codes=binary)                  # save machine language to .hack file
 
 if __name__ == '__main__':
     main()
