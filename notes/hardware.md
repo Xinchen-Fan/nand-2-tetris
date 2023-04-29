@@ -67,3 +67,4 @@ Using the chipset built in projects 1-3 to build a Central Processing Unit (CPU)
 ## Project 06 Assembler
 Developing an assembler, i.e. a capability to translate programs written in symbolic machine language into binary, executable code
 
+- `Assembler`:
