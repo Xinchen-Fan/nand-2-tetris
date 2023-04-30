@@ -30,8 +30,8 @@ def main():
         print('!!!Fail, vvp exec timeout!!!')
 
     # rename .vcd file
-    rename_cmd = r'mv ' + test_dir + r'dumpfile/wave.vcd ' + test_dir + r'dumpfile/' + sys.argv[1] + r'.vcd '
-    os.popen(rename_cmd)
+    # rename_cmd = r'mv ' + test_dir + r'dumpfile/wave.vcd ' + test_dir + r'dumpfile/' + sys.argv[1] + r'.vcd '
+    # os.popen(rename_cmd)
 
     # open "wave.vcd" to inspect waves 
     cmd = r'gtkwave ' + test_dir + r'dumpfile/' + sys.argv[1] + r'.vcd '

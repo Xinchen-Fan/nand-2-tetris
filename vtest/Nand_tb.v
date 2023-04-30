@@ -34,7 +34,7 @@ module Nand_tb();
     end
 
     initial begin
-        $dumpfile("vtest/dumpfile/wave.vcd");
+        $dumpfile("vtest/dumpfile/Nand.vcd");
 	    $dumpvars(0,Nand_tb);
 	end
 

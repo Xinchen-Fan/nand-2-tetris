@@ -4,7 +4,7 @@ Nand u_Nand(
     .a_i(),
     .b_i(),
     .out_o()
-)
+);
 
 */
 
