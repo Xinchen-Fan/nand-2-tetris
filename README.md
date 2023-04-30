@@ -1,6 +1,6 @@
 # nand-2-tetris
 - my project for Nand2Tetris
-- implement Hack CPU in verilog (with unit test)
+- implement Hack CPU in Verilog (with unit test)
 
 ## Project notes
 - [Nand2Tetris Part I: Hardware](./notes/hardware.md)
