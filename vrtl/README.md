@@ -8,3 +8,4 @@
 - `Mux` (Mux.v) : 1-bit multiplexor
 - `DMux` (DMux.v) : 1-bit demultiplexor
 - `Not16` (Not16.v) : 16-bit not gate
+- `And16` (And16.v) : 16-bit and gate

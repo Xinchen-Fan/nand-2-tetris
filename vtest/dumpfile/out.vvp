@@ -7,47 +7,65 @@
 :vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
 :vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
 :vpi_module "/usr/local/lib/ivl/va_math.vpi";
-S_0x55da8a7a0d80 .scope module, "Not16_tb" "Not16_tb" 2 3;
+S_0x558882f90d80 .scope module, "And16_tb" "And16_tb" 2 3;
  .timescale -9 -12;
-v0x55da8a7eb210_0 .var "in", 15 0;
-v0x55da8a7eb2d0_0 .net "out", 15 0, L_0x55da8a7eb3a0;  1 drivers
-S_0x55da8a7a0f10 .scope module, "u_Not16" "Not16" 2 8, 3 10 0, S_0x55da8a7a0d80;
+v0x558882fdd770_0 .var "a", 15 0;
+v0x558882fdd860_0 .var "b", 15 0;
+v0x558882fdd930_0 .net "out", 15 0, L_0x558882fdda30;  1 drivers
+S_0x558882f90f10 .scope module, "u_And16" "And16" 2 9, 3 11 0, S_0x558882f90d80;
  .timescale -9 -12;
-    .port_info 0 /INPUT 16 "in_i";
-    .port_info 1 /OUTPUT 16 "out_o";
-L_0x55da8a7eb3a0 .functor NOT 16, v0x55da8a7eb210_0, C4<0000000000000000>, C4<0000000000000000>, C4<0000000000000000>;
-v0x55da8a7a1d90_0 .net "in_i", 15 0, v0x55da8a7eb210_0;  1 drivers
-v0x55da8a7eb0d0_0 .net "out_o", 15 0, L_0x55da8a7eb3a0;  alias, 1 drivers
-    .scope S_0x55da8a7a0d80;
+    .port_info 0 /INPUT 16 "a_i";
+    .port_info 1 /INPUT 16 "b_i";
+    .port_info 2 /OUTPUT 16 "out_o";
+L_0x558882fdda30 .functor AND 16, v0x558882fdd770_0, v0x558882fdd860_0, C4<1111111111111111>, C4<1111111111111111>;
+v0x558882f91d90_0 .net "a_i", 15 0, v0x558882fdd770_0;  1 drivers
+v0x558882fdd550_0 .net "b_i", 15 0, v0x558882fdd860_0;  1 drivers
+v0x558882fdd630_0 .net "out_o", 15 0, L_0x558882fdda30;  alias, 1 drivers
+    .scope S_0x558882f90d80;
 T_0 ;
     %pushi/vec4 0, 0, 16;
-    %store/vec4 v0x55da8a7eb210_0, 0, 16;
-    %vpi_call 2 15 "$display", "test running..." {0 0 0};
+    %store/vec4 v0x558882fdd770_0, 0, 16;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x558882fdd860_0, 0, 16;
+    %vpi_call 2 18 "$display", "test running..." {0 0 0};
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x558882fdd770_0, 0, 16;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x558882fdd860_0, 0, 16;
     %delay 10000, 0;
     %pushi/vec4 65535, 0, 16;
-    %store/vec4 v0x55da8a7eb210_0, 0, 16;
+    %store/vec4 v0x558882fdd770_0, 0, 16;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x558882fdd860_0, 0, 16;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x558882fdd770_0, 0, 16;
+    %pushi/vec4 65535, 0, 16;
+    %store/vec4 v0x558882fdd860_0, 0, 16;
+    %delay 10000, 0;
+    %pushi/vec4 65535, 0, 16;
+    %store/vec4 v0x558882fdd770_0, 0, 16;
+    %pushi/vec4 65535, 0, 16;
+    %store/vec4 v0x558882fdd860_0, 0, 16;
     %delay 10000, 0;
     %pushi/vec4 43690, 0, 16;
-    %store/vec4 v0x55da8a7eb210_0, 0, 16;
-    %delay 10000, 0;
-    %pushi/vec4 21845, 0, 16;
-    %store/vec4 v0x55da8a7eb210_0, 0, 16;
-    %delay 10000, 0;
+    %store/vec4 v0x558882fdd770_0, 0, 16;
     %pushi/vec4 15345, 0, 16;
-    %store/vec4 v0x55da8a7eb210_0, 0, 16;
+    %store/vec4 v0x558882fdd860_0, 0, 16;
     %delay 1000000, 0;
-    %vpi_call 2 25 "$finish" {0 0 0};
+    %vpi_call 2 35 "$finish" {0 0 0};
     %end;
     .thread T_0;
-    .scope S_0x55da8a7a0d80;
+    .scope S_0x558882f90d80;
 T_1 ;
-    %vpi_call 2 29 "$dumpfile", "vtest/dumpfile/Not16.vcd" {0 0 0};
-    %vpi_call 2 30 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x55da8a7a0d80 {0 0 0};
+    %vpi_call 2 39 "$dumpfile", "vtest/dumpfile/And16.vcd" {0 0 0};
+    %vpi_call 2 40 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x558882f90d80 {0 0 0};
     %end;
     .thread T_1;
 # The file index is used to find the file name in the following table.
 :file_names 4;
     "N/A";
     "<interactive>";
-    "vtest/Not16_tb.v";
-    "vrtl/Not16.v";
+    "vtest/And16_tb.v";
+    "vrtl/And16.v";
