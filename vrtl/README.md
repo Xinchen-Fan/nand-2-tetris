@@ -11,3 +11,4 @@
 - `And16` (And16.v) : 16-bit and gate
 - `Or16` (Or16.v) : 16-bit or gate
 - `Mux16` (Mux16.v) : 16-bit multiplexor
+- `Or8Way` (Or8Way.v) : 8-way or gate
