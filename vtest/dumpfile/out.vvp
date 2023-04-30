@@ -7,68 +7,47 @@
 :vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
 :vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
 :vpi_module "/usr/local/lib/ivl/va_math.vpi";
-S_0x55d1a6670d40 .scope module, "DMux_tb" "DMux_tb" 2 3;
+S_0x55da8a7a0d80 .scope module, "Not16_tb" "Not16_tb" 2 3;
  .timescale -9 -12;
-v0x55d1a6682990_0 .net "a", 0 0, L_0x55d1a6682d20;  1 drivers
-v0x55d1a6682a50_0 .net "b", 0 0, L_0x55d1a6682f00;  1 drivers
-v0x55d1a6682b20_0 .var "in", 0 0;
-v0x55d1a6682c20_0 .var "sel", 0 0;
-S_0x55d1a6670ed0 .scope module, "u_DMux" "DMux" 2 10, 3 15 0, S_0x55d1a6670d40;
+v0x55da8a7eb210_0 .var "in", 15 0;
+v0x55da8a7eb2d0_0 .net "out", 15 0, L_0x55da8a7eb3a0;  1 drivers
+S_0x55da8a7a0f10 .scope module, "u_Not16" "Not16" 2 8, 3 10 0, S_0x55da8a7a0d80;
  .timescale -9 -12;
-    .port_info 0 /INPUT 1 "in_i";
-    .port_info 1 /INPUT 1 "sel_i";
-    .port_info 2 /OUTPUT 1 "a_o";
-    .port_info 3 /OUTPUT 1 "b_o";
-L_0x7f08ffe34018 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
-v0x55d1a665ddf0_0 .net/2u *"_ivl_0", 0 0, L_0x7f08ffe34018;  1 drivers
-L_0x7f08ffe34060 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
-v0x55d1a6682500_0 .net/2u *"_ivl_4", 0 0, L_0x7f08ffe34060;  1 drivers
-v0x55d1a66825e0_0 .net "a_o", 0 0, L_0x55d1a6682d20;  alias, 1 drivers
-v0x55d1a6682680_0 .net "b_o", 0 0, L_0x55d1a6682f00;  alias, 1 drivers
-v0x55d1a6682740_0 .net "in_i", 0 0, v0x55d1a6682b20_0;  1 drivers
-v0x55d1a6682850_0 .net "sel_i", 0 0, v0x55d1a6682c20_0;  1 drivers
-L_0x55d1a6682d20 .functor MUXZ 1, v0x55d1a6682b20_0, L_0x7f08ffe34018, v0x55d1a6682c20_0, C4<>;
-L_0x55d1a6682f00 .functor MUXZ 1, L_0x7f08ffe34060, v0x55d1a6682b20_0, v0x55d1a6682c20_0, C4<>;
-    .scope S_0x55d1a6670d40;
+    .port_info 0 /INPUT 16 "in_i";
+    .port_info 1 /OUTPUT 16 "out_o";
+L_0x55da8a7eb3a0 .functor NOT 16, v0x55da8a7eb210_0, C4<0000000000000000>, C4<0000000000000000>, C4<0000000000000000>;
+v0x55da8a7a1d90_0 .net "in_i", 15 0, v0x55da8a7eb210_0;  1 drivers
+v0x55da8a7eb0d0_0 .net "out_o", 15 0, L_0x55da8a7eb3a0;  alias, 1 drivers
+    .scope S_0x55da8a7a0d80;
 T_0 ;
-    %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55d1a6682b20_0, 0, 1;
-    %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55d1a6682c20_0, 0, 1;
-    %vpi_call 2 20 "$display", "test running..." {0 0 0};
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x55da8a7eb210_0, 0, 16;
+    %vpi_call 2 15 "$display", "test running..." {0 0 0};
     %delay 10000, 0;
-    %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55d1a6682b20_0, 0, 1;
-    %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55d1a6682c20_0, 0, 1;
+    %pushi/vec4 65535, 0, 16;
+    %store/vec4 v0x55da8a7eb210_0, 0, 16;
     %delay 10000, 0;
-    %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55d1a6682b20_0, 0, 1;
-    %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55d1a6682c20_0, 0, 1;
+    %pushi/vec4 43690, 0, 16;
+    %store/vec4 v0x55da8a7eb210_0, 0, 16;
     %delay 10000, 0;
-    %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55d1a6682b20_0, 0, 1;
-    %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55d1a6682c20_0, 0, 1;
+    %pushi/vec4 21845, 0, 16;
+    %store/vec4 v0x55da8a7eb210_0, 0, 16;
     %delay 10000, 0;
-    %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55d1a6682b20_0, 0, 1;
-    %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55d1a6682c20_0, 0, 1;
+    %pushi/vec4 15345, 0, 16;
+    %store/vec4 v0x55da8a7eb210_0, 0, 16;
     %delay 1000000, 0;
-    %vpi_call 2 30 "$finish" {0 0 0};
+    %vpi_call 2 25 "$finish" {0 0 0};
     %end;
     .thread T_0;
-    .scope S_0x55d1a6670d40;
+    .scope S_0x55da8a7a0d80;
 T_1 ;
-    %vpi_call 2 34 "$dumpfile", "vtest/dumpfile/DMux.vcd" {0 0 0};
-    %vpi_call 2 35 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x55d1a6670d40 {0 0 0};
+    %vpi_call 2 29 "$dumpfile", "vtest/dumpfile/Not16.vcd" {0 0 0};
+    %vpi_call 2 30 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x55da8a7a0d80 {0 0 0};
     %end;
     .thread T_1;
 # The file index is used to find the file name in the following table.
 :file_names 4;
     "N/A";
     "<interactive>";
-    "vtest/DMux_tb.v";
-    "vrtl/DMux.v";
+    "vtest/Not16_tb.v";
+    "vrtl/Not16.v";
