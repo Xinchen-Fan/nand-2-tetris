@@ -5,3 +5,4 @@
 - `And` (And.v) : 1-bit and gate
 - `Or` (Or.v) : 1-bit or gate
 - `Xor` (Xor.v) : 1-bit xor gate
+- `Mux` (Mux.v) : 1-bit Multiplexer
