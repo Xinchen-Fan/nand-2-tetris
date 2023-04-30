@@ -5,7 +5,26 @@
 ## Project notes
 - [Nand2Tetris Part I: Hardware](./notes/hardware.md)
 
-## Usage
+## Verilog implementation 
+### Chip set
+
+| count | name | file | spec |
+| -------- | -------- | -------- | -------- |
+| 01 | `Nand` | Nand.v | 1-bit nand gate |
+| 02 | `Not` | Not.v | 1-bit not gate |
+| 03 | `And` | And.v | 1-bit and gate |
+| 04 | `Or` | Or.v | 1-bit or gate |
+| 05 | `Xor` | Xor.v | 1-bit xor gate |
+| 06 | `Mux` | Mux.v | 1-bit multiplexor |
+| 07 | `DMux` | DMux.v | 1-bit demultiplexor |
+| 08 | `Not16` | Not16.v | 16-bit not gate |
+| 09 | `And16` | And16.v | 16-bit and gate |
+| 10 | `Or16` | Or16.v | 16-bit or gate |
+| 11 | `Mux16` | Mux16.v | 16-bit multiplexor |
+| 12 | `Or8Way` | Or8Way.v | 8-way or gate |
+| 13 | `Mux4Way16` | Mux4Way16.v | 4-way 16-bit multiplexor |
+
+### Test
 run unit test:
 
 ```sh
