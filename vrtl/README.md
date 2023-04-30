@@ -7,3 +7,4 @@
 - `Xor` (Xor.v) : 1-bit xor gate
 - `Mux` (Mux.v) : 1-bit multiplexor
 - `DMux` (DMux.v) : 1-bit demultiplexor
+- `Not16` (Not16.v) : 16-bit not gate
