@@ -1,0 +1,79 @@
+$date
+	Mon May  1 01:43:14 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module Mux4Way16_tb $end
+$var wire 16 ! out [15:0] $end
+$var reg 16 " a [15:0] $end
+$var reg 16 # b [15:0] $end
+$var reg 16 $ c [15:0] $end
+$var reg 16 % d [15:0] $end
+$var reg 2 & sel [1:0] $end
+$scope module u_Mux4Way16 $end
+$var wire 16 ' a_i [15:0] $end
+$var wire 16 ( b_i [15:0] $end
+$var wire 16 ) c_i [15:0] $end
+$var wire 16 * d_i [15:0] $end
+$var wire 2 + sel_i [1:0] $end
+$var wire 16 , out_o [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 ,
+b0 +
+b0 *
+b0 )
+b0 (
+b0 '
+b0 &
+b0 %
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#20000
+b1 &
+b1 +
+#30000
+b10 &
+b10 +
+#40000
+b11 &
+b11 +
+#50000
+b1001000110100 !
+b1001000110100 ,
+b0 &
+b0 +
+b101010101010101 %
+b101010101010101 *
+b1010101010101010 $
+b1010101010101010 )
+b1001100001110110 #
+b1001100001110110 (
+b1001000110100 "
+b1001000110100 '
+#60000
+b1001100001110110 !
+b1001100001110110 ,
+b1 &
+b1 +
+#70000
+b1010101010101010 !
+b1010101010101010 ,
+b10 &
+b10 +
+#80000
+b101010101010101 !
+b101010101010101 ,
+b11 &
+b11 +
+#1080000
