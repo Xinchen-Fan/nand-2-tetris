@@ -9,7 +9,7 @@
 ### Chip set
 
 | count | name | file | spec |
-| -------- | -------- | -------- | -------- |
+| :--------: | :--------: | :--------: | :--------: |
 | 01 | `Nand` | Nand.v | 1-bit nand gate |
 | 02 | `Not` | Not.v | 1-bit not gate |
 | 03 | `And` | And.v | 1-bit and gate |
