@@ -1,3 +1,4 @@
 # Chip Set
 
-- `Nand` (Nand.v) : Nand gate
+- `Nand` (Nand.v) : nand gate
+- `Not` (Not.v) : not gate
