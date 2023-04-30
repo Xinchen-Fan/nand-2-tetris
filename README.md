@@ -9,7 +9,7 @@
 run unit test:
 
 ```sh
-python python ./vtest/HardwareSimulator.py <module name>
+python ./vtest/HardwareSimulator.py <module name>
 ```
 
 ## Resources

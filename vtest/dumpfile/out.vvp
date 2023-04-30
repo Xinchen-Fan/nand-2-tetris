@@ -7,55 +7,57 @@
 :vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
 :vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
 :vpi_module "/usr/local/lib/ivl/va_math.vpi";
-S_0x55a6f5d2da80 .scope module, "Nand_tb" "Nand_tb" 2 3;
+S_0x55fdbf54da80 .scope module, "Nand_tb" "Nand_tb" 2 3;
  .timescale -9 -12;
-v0x55a6f5d3df40_0 .var "a", 0 0;
-v0x55a6f5d3e010_0 .var "b", 0 0;
-v0x55a6f5d3e0e0_0 .net "out", 0 0, L_0x55a6f5d3e1e0;  1 drivers
-S_0x55a6f5d2dc10 .scope module, "u_Nand" "Nand" 2 9, 3 11 0, S_0x55a6f5d2da80;
+v0x55fdbf55e3e0_0 .var "a", 0 0;
+v0x55fdbf55e4b0_0 .var "b", 0 0;
+v0x55fdbf55e580_0 .net "out", 0 0, L_0x55fdbf55e7c0;  1 drivers
+S_0x55fdbf54dc10 .scope module, "u_Nand" "Nand" 2 9, 3 11 0, S_0x55fdbf54da80;
  .timescale -9 -12;
     .port_info 0 /INPUT 1 "a_i";
     .port_info 1 /INPUT 1 "b_i";
     .port_info 2 /OUTPUT 1 "out_o";
-L_0x55a6f5d3e1e0 .functor XOR 1, v0x55a6f5d3df40_0, v0x55a6f5d3e010_0, C4<0>, C4<0>;
-v0x55a6f5cf3d90_0 .net "a_i", 0 0, v0x55a6f5d3df40_0;  1 drivers
-v0x55a6f5d3dd60_0 .net "b_i", 0 0, v0x55a6f5d3e010_0;  1 drivers
-v0x55a6f5d3de20_0 .net "out_o", 0 0, L_0x55a6f5d3e1e0;  alias, 1 drivers
-    .scope S_0x55a6f5d2da80;
+L_0x55fdbf55e680 .functor AND 1, v0x55fdbf55e3e0_0, v0x55fdbf55e4b0_0, C4<1>, C4<1>;
+L_0x55fdbf55e7c0 .functor NOT 1, L_0x55fdbf55e680, C4<0>, C4<0>, C4<0>;
+v0x55fdbf53a160_0 .net *"_ivl_0", 0 0, L_0x55fdbf55e680;  1 drivers
+v0x55fdbf55e140_0 .net "a_i", 0 0, v0x55fdbf55e3e0_0;  1 drivers
+v0x55fdbf55e200_0 .net "b_i", 0 0, v0x55fdbf55e4b0_0;  1 drivers
+v0x55fdbf55e2a0_0 .net "out_o", 0 0, L_0x55fdbf55e7c0;  alias, 1 drivers
+    .scope S_0x55fdbf54da80;
 T_0 ;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55a6f5d3df40_0, 0, 1;
+    %store/vec4 v0x55fdbf55e3e0_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55a6f5d3e010_0, 0, 1;
+    %store/vec4 v0x55fdbf55e4b0_0, 0, 1;
     %vpi_call 2 19 "$display", "test running..." {0 0 0};
     %delay 10000, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55a6f5d3df40_0, 0, 1;
+    %store/vec4 v0x55fdbf55e3e0_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55a6f5d3e010_0, 0, 1;
+    %store/vec4 v0x55fdbf55e4b0_0, 0, 1;
     %delay 10000, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55a6f5d3df40_0, 0, 1;
+    %store/vec4 v0x55fdbf55e3e0_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55a6f5d3e010_0, 0, 1;
+    %store/vec4 v0x55fdbf55e4b0_0, 0, 1;
     %delay 10000, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55a6f5d3df40_0, 0, 1;
+    %store/vec4 v0x55fdbf55e3e0_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55a6f5d3e010_0, 0, 1;
+    %store/vec4 v0x55fdbf55e4b0_0, 0, 1;
     %delay 10000, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55a6f5d3df40_0, 0, 1;
+    %store/vec4 v0x55fdbf55e3e0_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55a6f5d3e010_0, 0, 1;
+    %store/vec4 v0x55fdbf55e4b0_0, 0, 1;
     %delay 1000000, 0;
     %vpi_call 2 33 "$finish" {0 0 0};
     %end;
     .thread T_0;
-    .scope S_0x55a6f5d2da80;
+    .scope S_0x55fdbf54da80;
 T_1 ;
     %vpi_call 2 37 "$dumpfile", "vtest/dumpfile/Nand.vcd" {0 0 0};
-    %vpi_call 2 38 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x55a6f5d2da80 {0 0 0};
+    %vpi_call 2 38 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x55fdbf54da80 {0 0 0};
     %end;
     .thread T_1;
 # The file index is used to find the file name in the following table.

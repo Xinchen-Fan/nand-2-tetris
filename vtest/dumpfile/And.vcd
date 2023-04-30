@@ -1,5 +1,5 @@
 $date
-	Mon May  1 00:13:25 2023
+	Mon May  1 00:06:36 2023
 $end
 $version
 	Icarus Verilog
@@ -7,11 +7,11 @@ $end
 $timescale
 	1ps
 $end
-$scope module Nand_tb $end
+$scope module And_tb $end
 $var wire 1 ! out $end
 $var reg 1 " a $end
 $var reg 1 # b $end
-$scope module u_Nand $end
+$scope module u_And $end
 $var wire 1 " a_i $end
 $var wire 1 # b_i $end
 $var wire 1 ! out_o $end
@@ -22,7 +22,7 @@ $enddefinitions $end
 $dumpvars
 0#
 0"
-1!
+0!
 $end
 #20000
 1#
@@ -30,6 +30,6 @@ $end
 0#
 1"
 #40000
-0!
+1!
 1#
 #1040000
