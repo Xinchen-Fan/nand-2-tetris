@@ -23,6 +23,7 @@
 | 11 | `Mux16` | Mux16.v | 16-bit multiplexor |
 | 12 | `Or8Way` | Or8Way.v | 8-way or gate |
 | 13 | `Mux4Way16` | Mux4Way16.v | 4-way 16-bit multiplexor |
+| 14 | `Mux8Way16` | Mux8Way16.v | 8-way 16-bit multiplexor |
 
 ### Test
 run unit test:
