@@ -1,0 +1,66 @@
+$date
+	Mon May  1 13:24:31 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module DMux4Way_tb $end
+$var wire 1 ! d $end
+$var wire 1 " c $end
+$var wire 1 # b $end
+$var wire 1 $ a $end
+$var reg 1 % in $end
+$var reg 2 & sel [1:0] $end
+$scope module u_DMux4Way $end
+$var wire 1 % in_i $end
+$var wire 2 ' sel_i [1:0] $end
+$var wire 1 ! d_o $end
+$var wire 1 " c_o $end
+$var wire 1 # b_o $end
+$var wire 1 $ a_o $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 '
+b0 &
+0%
+0$
+0#
+0"
+0!
+$end
+#20000
+b1 &
+b1 '
+#30000
+b10 &
+b10 '
+#40000
+b11 &
+b11 '
+#50000
+1$
+b0 &
+b0 '
+1%
+#60000
+0$
+1#
+b1 &
+b1 '
+#70000
+0#
+1"
+b10 &
+b10 '
+#80000
+0"
+1!
+b11 &
+b11 '
+#1080000
