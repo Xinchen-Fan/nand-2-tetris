@@ -1,0 +1,109 @@
+$date
+	Mon May  1 14:06:28 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module FullAdder_tb $end
+$var wire 1 ! sum $end
+$var wire 1 " carry $end
+$var reg 1 # a $end
+$var reg 1 $ b $end
+$var reg 1 % c $end
+$scope module u_FullAdder $end
+$var wire 1 # a_i $end
+$var wire 1 $ b_i $end
+$var wire 1 % c_i $end
+$var wire 1 & tmp_sum $end
+$var wire 1 ' tmp_carry2 $end
+$var wire 1 ( tmp_carry1 $end
+$var wire 1 ! sum_o $end
+$var wire 1 " carry_o $end
+$scope module u1_HalfAdder $end
+$var wire 1 # a_i $end
+$var wire 1 $ b_i $end
+$var wire 1 & sum_o $end
+$var wire 1 ( carry_o $end
+$scope module u_And $end
+$var wire 1 # a_i $end
+$var wire 1 $ b_i $end
+$var wire 1 ( out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 # a_i $end
+$var wire 1 $ b_i $end
+$var wire 1 & out_o $end
+$upscope $end
+$upscope $end
+$scope module u2_HalfAdder $end
+$var wire 1 % a_i $end
+$var wire 1 & b_i $end
+$var wire 1 ! sum_o $end
+$var wire 1 ' carry_o $end
+$scope module u_And $end
+$var wire 1 % a_i $end
+$var wire 1 & b_i $end
+$var wire 1 ' out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 % a_i $end
+$var wire 1 & b_i $end
+$var wire 1 ! out_o $end
+$upscope $end
+$upscope $end
+$scope module u_Or $end
+$var wire 1 ( a_i $end
+$var wire 1 ' b_i $end
+$var wire 1 " out_o $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0(
+0'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#20000
+1!
+1%
+#30000
+1&
+0%
+1$
+#40000
+1"
+1'
+0!
+1%
+#50000
+0"
+0'
+1!
+0%
+0$
+1#
+#60000
+1"
+1'
+0!
+1%
+#70000
+0'
+1(
+0&
+0%
+1$
+#80000
+1!
+1%
+#1080000
