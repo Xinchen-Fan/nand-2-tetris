@@ -7,15 +7,46 @@
 :vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
 :vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
 :vpi_module "/usr/local/lib/ivl/va_math.vpi";
-S_0x55e4791d5d80 .scope module, "Mux4Way16_tb" "Mux4Way16_tb" 2 3;
+S_0x56202025a370 .scope module, "Mux8Way16_tb" "Mux8Way16_tb" 2 3;
  .timescale -9 -12;
-v0x55e47922dad0_0 .var "a", 15 0;
-v0x55e47922dbb0_0 .var "b", 15 0;
-v0x55e47922dc80_0 .var "c", 15 0;
-v0x55e47922dd80_0 .var "d", 15 0;
-v0x55e47922de50_0 .net "out", 15 0, L_0x55e47922e5e0;  1 drivers
-v0x55e47922def0_0 .var "sel", 1 0;
-S_0x55e4791d5f10 .scope module, "u_Mux4Way16" "Mux4Way16" 2 12, 3 21 0, S_0x55e4791d5d80;
+v0x56202027faf0_0 .var "a", 15 0;
+v0x56202027fc20_0 .var "b", 15 0;
+v0x56202027fd30_0 .var "c", 15 0;
+v0x56202027fe20_0 .var "d", 15 0;
+v0x56202027ff30_0 .var "e", 15 0;
+v0x562020280090_0 .var "f", 15 0;
+v0x5620202801a0_0 .var "g", 15 0;
+v0x5620202802b0_0 .var "h", 15 0;
+v0x5620202803c0_0 .net "out", 15 0, L_0x5620202813f0;  1 drivers
+v0x562020280510_0 .var "sel", 2 0;
+S_0x56202025a500 .scope module, "u_Mux8Way16" "Mux8Way16" 2 16, 3 28 0, S_0x56202025a370;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 16 "a_i";
+    .port_info 1 /INPUT 16 "b_i";
+    .port_info 2 /INPUT 16 "c_i";
+    .port_info 3 /INPUT 16 "d_i";
+    .port_info 4 /INPUT 16 "e_i";
+    .port_info 5 /INPUT 16 "f_i";
+    .port_info 6 /INPUT 16 "g_i";
+    .port_info 7 /INPUT 16 "h_i";
+    .port_info 8 /INPUT 3 "sel_i";
+    .port_info 9 /OUTPUT 16 "out_o";
+v0x56202027eea0_0 .net "a_i", 15 0, v0x56202027faf0_0;  1 drivers
+v0x56202027ef80_0 .net "b_i", 15 0, v0x56202027fc20_0;  1 drivers
+v0x56202027f050_0 .net "c_i", 15 0, v0x56202027fd30_0;  1 drivers
+v0x56202027f150_0 .net "d_i", 15 0, v0x56202027fe20_0;  1 drivers
+v0x56202027f220_0 .net "e_i", 15 0, v0x56202027ff30_0;  1 drivers
+v0x56202027f310_0 .net "f_i", 15 0, v0x562020280090_0;  1 drivers
+v0x56202027f3e0_0 .net "g_i", 15 0, v0x5620202801a0_0;  1 drivers
+v0x56202027f4b0_0 .net "h_i", 15 0, v0x5620202802b0_0;  1 drivers
+v0x56202027f580_0 .net "out_o", 15 0, L_0x5620202813f0;  alias, 1 drivers
+v0x56202027f6e0_0 .net "sel_i", 2 0, v0x562020280510_0;  1 drivers
+v0x56202027f780_0 .net "tmp1", 15 0, L_0x5620202809e0;  1 drivers
+v0x56202027f840_0 .net "tmp2", 15 0, L_0x5620202810f0;  1 drivers
+L_0x562020280bb0 .part v0x562020280510_0, 0, 2;
+L_0x5620202812c0 .part v0x562020280510_0, 0, 2;
+L_0x5620202815b0 .part v0x562020280510_0, 2, 1;
+S_0x56202025e520 .scope module, "u1_Mux4Way16" "Mux4Way16" 3 44, 4 21 0, S_0x56202025a500;
  .timescale -9 -12;
     .port_info 0 /INPUT 16 "a_i";
     .port_info 1 /INPUT 16 "b_i";
@@ -23,137 +54,175 @@ S_0x55e4791d5f10 .scope module, "u_Mux4Way16" "Mux4Way16" 2 12, 3 21 0, S_0x55e4
     .port_info 3 /INPUT 16 "d_i";
     .port_info 4 /INPUT 2 "sel_i";
     .port_info 5 /OUTPUT 16 "out_o";
-v0x55e4792164c0_0 .net *"_ivl_1", 0 0, L_0x55e47922dfc0;  1 drivers
-v0x55e47922d120_0 .net *"_ivl_3", 0 0, L_0x55e47922e0e0;  1 drivers
-v0x55e47922d200_0 .net *"_ivl_4", 15 0, L_0x55e47922e180;  1 drivers
-v0x55e47922d2c0_0 .net *"_ivl_7", 0 0, L_0x55e47922e340;  1 drivers
-v0x55e47922d3a0_0 .net *"_ivl_8", 15 0, L_0x55e47922e4a0;  1 drivers
-v0x55e47922d4d0_0 .net "a_i", 15 0, v0x55e47922dad0_0;  1 drivers
-v0x55e47922d5b0_0 .net "b_i", 15 0, v0x55e47922dbb0_0;  1 drivers
-v0x55e47922d690_0 .net "c_i", 15 0, v0x55e47922dc80_0;  1 drivers
-v0x55e47922d770_0 .net "d_i", 15 0, v0x55e47922dd80_0;  1 drivers
-v0x55e47922d850_0 .net "out_o", 15 0, L_0x55e47922e5e0;  alias, 1 drivers
-v0x55e47922d930_0 .net "sel_i", 1 0, v0x55e47922def0_0;  1 drivers
-L_0x55e47922dfc0 .part v0x55e47922def0_0, 0, 1;
-L_0x55e47922e0e0 .part v0x55e47922def0_0, 1, 1;
-L_0x55e47922e180 .functor MUXZ 16, v0x55e47922dbb0_0, v0x55e47922dd80_0, L_0x55e47922e0e0, C4<>;
-L_0x55e47922e340 .part v0x55e47922def0_0, 1, 1;
-L_0x55e47922e4a0 .functor MUXZ 16, v0x55e47922dad0_0, v0x55e47922dc80_0, L_0x55e47922e340, C4<>;
-L_0x55e47922e5e0 .functor MUXZ 16, L_0x55e47922e4a0, L_0x55e47922e180, L_0x55e47922dfc0, C4<>;
-    .scope S_0x55e4791d5d80;
+v0x56202025e7a0_0 .net *"_ivl_1", 0 0, L_0x5620202805d0;  1 drivers
+v0x56202027d210_0 .net *"_ivl_3", 0 0, L_0x562020280670;  1 drivers
+v0x56202027d2f0_0 .net *"_ivl_4", 15 0, L_0x562020280760;  1 drivers
+v0x56202027d3b0_0 .net *"_ivl_7", 0 0, L_0x562020280850;  1 drivers
+v0x56202027d490_0 .net *"_ivl_8", 15 0, L_0x5620202808f0;  1 drivers
+v0x56202027d5c0_0 .net "a_i", 15 0, v0x56202027faf0_0;  alias, 1 drivers
+v0x56202027d6a0_0 .net "b_i", 15 0, v0x56202027fc20_0;  alias, 1 drivers
+v0x56202027d780_0 .net "c_i", 15 0, v0x56202027fd30_0;  alias, 1 drivers
+v0x56202027d860_0 .net "d_i", 15 0, v0x56202027fe20_0;  alias, 1 drivers
+v0x56202027d940_0 .net "out_o", 15 0, L_0x5620202809e0;  alias, 1 drivers
+v0x56202027da20_0 .net "sel_i", 1 0, L_0x562020280bb0;  1 drivers
+L_0x5620202805d0 .part L_0x562020280bb0, 0, 1;
+L_0x562020280670 .part L_0x562020280bb0, 1, 1;
+L_0x562020280760 .functor MUXZ 16, v0x56202027fc20_0, v0x56202027fe20_0, L_0x562020280670, C4<>;
+L_0x562020280850 .part L_0x562020280bb0, 1, 1;
+L_0x5620202808f0 .functor MUXZ 16, v0x56202027faf0_0, v0x56202027fd30_0, L_0x562020280850, C4<>;
+L_0x5620202809e0 .functor MUXZ 16, L_0x5620202808f0, L_0x562020280760, L_0x5620202805d0, C4<>;
+S_0x56202027dbc0 .scope module, "u2_Mux4Way16" "Mux4Way16" 3 53, 4 21 0, S_0x56202025a500;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 16 "a_i";
+    .port_info 1 /INPUT 16 "b_i";
+    .port_info 2 /INPUT 16 "c_i";
+    .port_info 3 /INPUT 16 "d_i";
+    .port_info 4 /INPUT 2 "sel_i";
+    .port_info 5 /OUTPUT 16 "out_o";
+v0x56202027de10_0 .net *"_ivl_1", 0 0, L_0x562020280ce0;  1 drivers
+v0x56202027def0_0 .net *"_ivl_3", 0 0, L_0x562020280d80;  1 drivers
+v0x56202027dfd0_0 .net *"_ivl_4", 15 0, L_0x562020280e70;  1 drivers
+v0x56202027e090_0 .net *"_ivl_7", 0 0, L_0x562020280f60;  1 drivers
+v0x56202027e170_0 .net *"_ivl_8", 15 0, L_0x562020281000;  1 drivers
+v0x56202027e2a0_0 .net "a_i", 15 0, v0x56202027ff30_0;  alias, 1 drivers
+v0x56202027e380_0 .net "b_i", 15 0, v0x562020280090_0;  alias, 1 drivers
+v0x56202027e460_0 .net "c_i", 15 0, v0x5620202801a0_0;  alias, 1 drivers
+v0x56202027e540_0 .net "d_i", 15 0, v0x5620202802b0_0;  alias, 1 drivers
+v0x56202027e6b0_0 .net "out_o", 15 0, L_0x5620202810f0;  alias, 1 drivers
+v0x56202027e790_0 .net "sel_i", 1 0, L_0x5620202812c0;  1 drivers
+L_0x562020280ce0 .part L_0x5620202812c0, 0, 1;
+L_0x562020280d80 .part L_0x5620202812c0, 1, 1;
+L_0x562020280e70 .functor MUXZ 16, v0x562020280090_0, v0x5620202802b0_0, L_0x562020280d80, C4<>;
+L_0x562020280f60 .part L_0x5620202812c0, 1, 1;
+L_0x562020281000 .functor MUXZ 16, v0x56202027ff30_0, v0x5620202801a0_0, L_0x562020280f60, C4<>;
+L_0x5620202810f0 .functor MUXZ 16, L_0x562020281000, L_0x562020280e70, L_0x562020280ce0, C4<>;
+S_0x56202027e930 .scope module, "u_Mux16" "Mux16" 3 62, 5 12 0, S_0x56202025a500;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 16 "a_i";
+    .port_info 1 /INPUT 16 "b_i";
+    .port_info 2 /INPUT 1 "sel_i";
+    .port_info 3 /OUTPUT 16 "out_o";
+v0x56202027eb30_0 .net "a_i", 15 0, L_0x5620202809e0;  alias, 1 drivers
+v0x56202027ebf0_0 .net "b_i", 15 0, L_0x5620202810f0;  alias, 1 drivers
+v0x56202027ec90_0 .net "out_o", 15 0, L_0x5620202813f0;  alias, 1 drivers
+v0x56202027ed30_0 .net "sel_i", 0 0, L_0x5620202815b0;  1 drivers
+L_0x5620202813f0 .functor MUXZ 16, L_0x5620202809e0, L_0x5620202810f0, L_0x5620202815b0, C4<>;
+    .scope S_0x56202025a370;
 T_0 ;
     %pushi/vec4 0, 0, 16;
-    %store/vec4 v0x55e47922dad0_0, 0, 16;
+    %store/vec4 v0x56202027faf0_0, 0, 16;
     %pushi/vec4 0, 0, 16;
-    %store/vec4 v0x55e47922dbb0_0, 0, 16;
+    %store/vec4 v0x56202027fc20_0, 0, 16;
     %pushi/vec4 0, 0, 16;
-    %store/vec4 v0x55e47922dc80_0, 0, 16;
+    %store/vec4 v0x56202027fd30_0, 0, 16;
     %pushi/vec4 0, 0, 16;
-    %store/vec4 v0x55e47922dd80_0, 0, 16;
-    %pushi/vec4 0, 0, 2;
-    %store/vec4 v0x55e47922def0_0, 0, 2;
-    %vpi_call 2 25 "$display", "test running..." {0 0 0};
+    %store/vec4 v0x56202027fe20_0, 0, 16;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x56202027ff30_0, 0, 16;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x562020280090_0, 0, 16;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x5620202801a0_0, 0, 16;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x5620202802b0_0, 0, 16;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v0x562020280510_0, 0, 3;
+    %vpi_call 2 35 "$display", "test running..." {0 0 0};
     %delay 10000, 0;
     %pushi/vec4 0, 0, 16;
-    %store/vec4 v0x55e47922dad0_0, 0, 16;
+    %store/vec4 v0x56202027faf0_0, 0, 16;
     %pushi/vec4 0, 0, 16;
-    %store/vec4 v0x55e47922dbb0_0, 0, 16;
+    %store/vec4 v0x56202027fc20_0, 0, 16;
     %pushi/vec4 0, 0, 16;
-    %store/vec4 v0x55e47922dc80_0, 0, 16;
+    %store/vec4 v0x56202027fd30_0, 0, 16;
     %pushi/vec4 0, 0, 16;
-    %store/vec4 v0x55e47922dd80_0, 0, 16;
-    %pushi/vec4 0, 0, 2;
-    %store/vec4 v0x55e47922def0_0, 0, 2;
+    %store/vec4 v0x56202027fe20_0, 0, 16;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x56202027ff30_0, 0, 16;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x562020280090_0, 0, 16;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x5620202801a0_0, 0, 16;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x5620202802b0_0, 0, 16;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v0x562020280510_0, 0, 3;
     %delay 10000, 0;
-    %pushi/vec4 0, 0, 16;
-    %store/vec4 v0x55e47922dad0_0, 0, 16;
-    %pushi/vec4 0, 0, 16;
-    %store/vec4 v0x55e47922dbb0_0, 0, 16;
-    %pushi/vec4 0, 0, 16;
-    %store/vec4 v0x55e47922dc80_0, 0, 16;
-    %pushi/vec4 0, 0, 16;
-    %store/vec4 v0x55e47922dd80_0, 0, 16;
-    %pushi/vec4 1, 0, 2;
-    %store/vec4 v0x55e47922def0_0, 0, 2;
+    %pushi/vec4 1, 0, 3;
+    %store/vec4 v0x562020280510_0, 0, 3;
     %delay 10000, 0;
-    %pushi/vec4 0, 0, 16;
-    %store/vec4 v0x55e47922dad0_0, 0, 16;
-    %pushi/vec4 0, 0, 16;
-    %store/vec4 v0x55e47922dbb0_0, 0, 16;
-    %pushi/vec4 0, 0, 16;
-    %store/vec4 v0x55e47922dc80_0, 0, 16;
-    %pushi/vec4 0, 0, 16;
-    %store/vec4 v0x55e47922dd80_0, 0, 16;
-    %pushi/vec4 2, 0, 2;
-    %store/vec4 v0x55e47922def0_0, 0, 2;
+    %pushi/vec4 2, 0, 3;
+    %store/vec4 v0x562020280510_0, 0, 3;
     %delay 10000, 0;
-    %pushi/vec4 0, 0, 16;
-    %store/vec4 v0x55e47922dad0_0, 0, 16;
-    %pushi/vec4 0, 0, 16;
-    %store/vec4 v0x55e47922dbb0_0, 0, 16;
-    %pushi/vec4 0, 0, 16;
-    %store/vec4 v0x55e47922dc80_0, 0, 16;
-    %pushi/vec4 0, 0, 16;
-    %store/vec4 v0x55e47922dd80_0, 0, 16;
-    %pushi/vec4 3, 0, 2;
-    %store/vec4 v0x55e47922def0_0, 0, 2;
+    %pushi/vec4 3, 0, 3;
+    %store/vec4 v0x562020280510_0, 0, 3;
     %delay 10000, 0;
-    %pushi/vec4 4660, 0, 16;
-    %store/vec4 v0x55e47922dad0_0, 0, 16;
-    %pushi/vec4 39030, 0, 16;
-    %store/vec4 v0x55e47922dbb0_0, 0, 16;
-    %pushi/vec4 43690, 0, 16;
-    %store/vec4 v0x55e47922dc80_0, 0, 16;
-    %pushi/vec4 21845, 0, 16;
-    %store/vec4 v0x55e47922dd80_0, 0, 16;
-    %pushi/vec4 0, 0, 2;
-    %store/vec4 v0x55e47922def0_0, 0, 2;
+    %pushi/vec4 4, 0, 3;
+    %store/vec4 v0x562020280510_0, 0, 3;
+    %delay 10000, 0;
+    %pushi/vec4 5, 0, 3;
+    %store/vec4 v0x562020280510_0, 0, 3;
+    %delay 10000, 0;
+    %pushi/vec4 6, 0, 3;
+    %store/vec4 v0x562020280510_0, 0, 3;
+    %delay 10000, 0;
+    %pushi/vec4 7, 0, 3;
+    %store/vec4 v0x562020280510_0, 0, 3;
     %delay 10000, 0;
     %pushi/vec4 4660, 0, 16;
-    %store/vec4 v0x55e47922dad0_0, 0, 16;
-    %pushi/vec4 39030, 0, 16;
-    %store/vec4 v0x55e47922dbb0_0, 0, 16;
-    %pushi/vec4 43690, 0, 16;
-    %store/vec4 v0x55e47922dc80_0, 0, 16;
-    %pushi/vec4 21845, 0, 16;
-    %store/vec4 v0x55e47922dd80_0, 0, 16;
-    %pushi/vec4 1, 0, 2;
-    %store/vec4 v0x55e47922def0_0, 0, 2;
+    %store/vec4 v0x56202027faf0_0, 0, 16;
+    %pushi/vec4 9029, 0, 16;
+    %store/vec4 v0x56202027fc20_0, 0, 16;
+    %pushi/vec4 13398, 0, 16;
+    %store/vec4 v0x56202027fd30_0, 0, 16;
+    %pushi/vec4 17767, 0, 16;
+    %store/vec4 v0x56202027fe20_0, 0, 16;
+    %pushi/vec4 22136, 0, 16;
+    %store/vec4 v0x56202027ff30_0, 0, 16;
+    %pushi/vec4 26505, 0, 16;
+    %store/vec4 v0x562020280090_0, 0, 16;
+    %pushi/vec4 30874, 0, 16;
+    %store/vec4 v0x5620202801a0_0, 0, 16;
+    %pushi/vec4 35243, 0, 16;
+    %store/vec4 v0x5620202802b0_0, 0, 16;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v0x562020280510_0, 0, 3;
     %delay 10000, 0;
-    %pushi/vec4 4660, 0, 16;
-    %store/vec4 v0x55e47922dad0_0, 0, 16;
-    %pushi/vec4 39030, 0, 16;
-    %store/vec4 v0x55e47922dbb0_0, 0, 16;
-    %pushi/vec4 43690, 0, 16;
-    %store/vec4 v0x55e47922dc80_0, 0, 16;
-    %pushi/vec4 21845, 0, 16;
-    %store/vec4 v0x55e47922dd80_0, 0, 16;
-    %pushi/vec4 2, 0, 2;
-    %store/vec4 v0x55e47922def0_0, 0, 2;
+    %pushi/vec4 1, 0, 3;
+    %store/vec4 v0x562020280510_0, 0, 3;
     %delay 10000, 0;
-    %pushi/vec4 4660, 0, 16;
-    %store/vec4 v0x55e47922dad0_0, 0, 16;
-    %pushi/vec4 39030, 0, 16;
-    %store/vec4 v0x55e47922dbb0_0, 0, 16;
-    %pushi/vec4 43690, 0, 16;
-    %store/vec4 v0x55e47922dc80_0, 0, 16;
-    %pushi/vec4 21845, 0, 16;
-    %store/vec4 v0x55e47922dd80_0, 0, 16;
-    %pushi/vec4 3, 0, 2;
-    %store/vec4 v0x55e47922def0_0, 0, 2;
+    %pushi/vec4 2, 0, 3;
+    %store/vec4 v0x562020280510_0, 0, 3;
+    %delay 10000, 0;
+    %pushi/vec4 3, 0, 3;
+    %store/vec4 v0x562020280510_0, 0, 3;
+    %delay 10000, 0;
+    %pushi/vec4 4, 0, 3;
+    %store/vec4 v0x562020280510_0, 0, 3;
+    %delay 10000, 0;
+    %pushi/vec4 5, 0, 3;
+    %store/vec4 v0x562020280510_0, 0, 3;
+    %delay 10000, 0;
+    %pushi/vec4 6, 0, 3;
+    %store/vec4 v0x562020280510_0, 0, 3;
+    %delay 10000, 0;
+    %pushi/vec4 7, 0, 3;
+    %store/vec4 v0x562020280510_0, 0, 3;
     %delay 1000000, 0;
-    %vpi_call 2 59 "$finish" {0 0 0};
+    %vpi_call 2 63 "$finish" {0 0 0};
     %end;
     .thread T_0;
-    .scope S_0x55e4791d5d80;
+    .scope S_0x56202025a370;
 T_1 ;
-    %vpi_call 2 63 "$dumpfile", "vtest/dumpfile/Mux4Way16.vcd" {0 0 0};
-    %vpi_call 2 64 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x55e4791d5d80 {0 0 0};
+    %vpi_call 2 67 "$dumpfile", "vtest/dumpfile/Mux8Way16.vcd" {0 0 0};
+    %vpi_call 2 68 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x56202025a370 {0 0 0};
     %end;
     .thread T_1;
 # The file index is used to find the file name in the following table.
-:file_names 4;
+:file_names 6;
     "N/A";
     "<interactive>";
-    "vtest/Mux4Way16_tb.v";
-    "vrtl/Mux4Way16.v";
+    "vtest/Mux8Way16_tb.v";
+    "vrtl/Mux8Way16.v";
+    "vrtl//./Mux4Way16.v";
+    "vrtl//./Mux16.v";
