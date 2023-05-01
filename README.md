@@ -26,6 +26,7 @@
 | 14 | `Mux8Way16` | Mux8Way16.v | 8-way 16-bit multiplexor |
 | 15 | `DMux4Way` | DMux4Way.v | 4-way 1-bit demultiplexor |
 | 16 | `DMux8Way` | DMux8Way.v | 8-way 1-bit demultiplexor |
+| 17 | `HalfAdder` | HalfAdder.v | 1-bit halfadder |
 
 ### Test
 run unit test:
