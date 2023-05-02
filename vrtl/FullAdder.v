@@ -10,8 +10,6 @@ FullAdder u_FullAdder(
 
 */
 
-`include "./HalfAdder.v"
-`include "./Or.v"
 
 module FullAdder(
     input wire a_i,

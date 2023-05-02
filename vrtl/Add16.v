@@ -8,8 +8,6 @@ Add16 u_Add16(
 
 */
 
-`include "./HalfAdder.v"
-`include "./FullAdder.v"
 
 module Add16(
     input wire [15:0] a_i,

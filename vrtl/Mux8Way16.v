@@ -22,8 +22,6 @@ Mux8Way16 u_Mux8Way16(
 
 */
 
-`include "./Mux4Way16.v"
-`include "./Mux16.v"
 
 module Mux8Way16(
     input wire [15:0] a_i,

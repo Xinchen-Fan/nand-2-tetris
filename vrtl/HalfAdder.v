@@ -9,8 +9,6 @@ HalfAdder u_HalfAdder(
 
 */
 
-`include "./Xor.v"
-`include "./And.v"
 
 module HalfAdder(
     input wire a_i,

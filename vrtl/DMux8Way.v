@@ -21,8 +21,6 @@ DMux8Way u_DMux8Way(
 
 */
 
-`include "./DMux.v"
-`include "./DMux4Way.v"
 
 module DMux8Way(
     input wire in_i,
