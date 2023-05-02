@@ -25,4 +25,4 @@
 | 21 | `ALU` | ALU.v | 16-bit Arithmetic Logic Unit |
 | 21 | `DFF` | DFF.v | 1-bit D Flip-Flop |
 | 22 | `Bit` | Bit.v | 1-bit register |
-| 23 | `Register` | Register.v | 1-bit register |
+| 23 | `Register` | Register.v | 16-bit register |
