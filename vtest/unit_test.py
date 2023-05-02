@@ -9,6 +9,7 @@ def main():
     rtl_dir = r'vrtl/'
     tb_file = test_dir + sys.argv[1] + r'_tb.v'
     rtl_file = rtl_dir + sys.argv[1] + r'.v'
+
     
     # compile rtl by iverilog
     iverilog_cmd = ['iverilog'] # iverilog
@@ -16,7 +17,10 @@ def main():
     iverilog_cmd += ['-I', rtl_dir] # path for verilog head(defs.v)
     iverilog_cmd += ['-D', r'OUTPUT="signature.output"'] # simulation output file
     iverilog_cmd.append(tb_file) # testbench
-    iverilog_cmd.append(rtl_file) # rtl file
+    # iverilog_cmd.append(rtl_file) # rtl file
+    file = os.listdir(rtl_dir)
+    for f in file:
+        iverilog_cmd.append(rtl_dir + f)
     process = subprocess.Popen(iverilog_cmd)
     process.wait(timeout=5)
 
