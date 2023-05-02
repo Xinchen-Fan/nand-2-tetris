@@ -1,0 +1,1153 @@
+$date
+	Tue May  2 13:44:19 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module Inc16_tb $end
+$var wire 16 ! out [15:0] $end
+$var reg 16 " in [15:0] $end
+$scope module u_Inc16 $end
+$var wire 16 # in_i [15:0] $end
+$var wire 16 $ out_o [15:0] $end
+$scope module u_Add16 $end
+$var wire 16 % a_i [15:0] $end
+$var wire 16 & b_i [15:0] $end
+$var wire 16 ' out_o [15:0] $end
+$var wire 15 ( carry [14:0] $end
+$scope module u10_FullAdder $end
+$var wire 1 ) a_i $end
+$var wire 1 * b_i $end
+$var wire 1 + c_i $end
+$var wire 1 , tmp_sum $end
+$var wire 1 - tmp_carry2 $end
+$var wire 1 . tmp_carry1 $end
+$var wire 1 / sum_o $end
+$var wire 1 0 carry_o $end
+$scope module u1_HalfAdder $end
+$var wire 1 ) a_i $end
+$var wire 1 * b_i $end
+$var wire 1 , sum_o $end
+$var wire 1 . carry_o $end
+$scope module u_And $end
+$var wire 1 ) a_i $end
+$var wire 1 * b_i $end
+$var wire 1 . out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 ) a_i $end
+$var wire 1 * b_i $end
+$var wire 1 , out_o $end
+$upscope $end
+$upscope $end
+$scope module u2_HalfAdder $end
+$var wire 1 + a_i $end
+$var wire 1 , b_i $end
+$var wire 1 / sum_o $end
+$var wire 1 - carry_o $end
+$scope module u_And $end
+$var wire 1 + a_i $end
+$var wire 1 , b_i $end
+$var wire 1 - out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 + a_i $end
+$var wire 1 , b_i $end
+$var wire 1 / out_o $end
+$upscope $end
+$upscope $end
+$scope module u_Or $end
+$var wire 1 . a_i $end
+$var wire 1 - b_i $end
+$var wire 1 0 out_o $end
+$upscope $end
+$upscope $end
+$scope module u11_FullAdder $end
+$var wire 1 1 a_i $end
+$var wire 1 2 b_i $end
+$var wire 1 3 c_i $end
+$var wire 1 4 tmp_sum $end
+$var wire 1 5 tmp_carry2 $end
+$var wire 1 6 tmp_carry1 $end
+$var wire 1 7 sum_o $end
+$var wire 1 8 carry_o $end
+$scope module u1_HalfAdder $end
+$var wire 1 1 a_i $end
+$var wire 1 2 b_i $end
+$var wire 1 4 sum_o $end
+$var wire 1 6 carry_o $end
+$scope module u_And $end
+$var wire 1 1 a_i $end
+$var wire 1 2 b_i $end
+$var wire 1 6 out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 1 a_i $end
+$var wire 1 2 b_i $end
+$var wire 1 4 out_o $end
+$upscope $end
+$upscope $end
+$scope module u2_HalfAdder $end
+$var wire 1 3 a_i $end
+$var wire 1 4 b_i $end
+$var wire 1 7 sum_o $end
+$var wire 1 5 carry_o $end
+$scope module u_And $end
+$var wire 1 3 a_i $end
+$var wire 1 4 b_i $end
+$var wire 1 5 out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 3 a_i $end
+$var wire 1 4 b_i $end
+$var wire 1 7 out_o $end
+$upscope $end
+$upscope $end
+$scope module u_Or $end
+$var wire 1 6 a_i $end
+$var wire 1 5 b_i $end
+$var wire 1 8 out_o $end
+$upscope $end
+$upscope $end
+$scope module u12_FullAdder $end
+$var wire 1 9 a_i $end
+$var wire 1 : b_i $end
+$var wire 1 ; c_i $end
+$var wire 1 < tmp_sum $end
+$var wire 1 = tmp_carry2 $end
+$var wire 1 > tmp_carry1 $end
+$var wire 1 ? sum_o $end
+$var wire 1 @ carry_o $end
+$scope module u1_HalfAdder $end
+$var wire 1 9 a_i $end
+$var wire 1 : b_i $end
+$var wire 1 < sum_o $end
+$var wire 1 > carry_o $end
+$scope module u_And $end
+$var wire 1 9 a_i $end
+$var wire 1 : b_i $end
+$var wire 1 > out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 9 a_i $end
+$var wire 1 : b_i $end
+$var wire 1 < out_o $end
+$upscope $end
+$upscope $end
+$scope module u2_HalfAdder $end
+$var wire 1 ; a_i $end
+$var wire 1 < b_i $end
+$var wire 1 ? sum_o $end
+$var wire 1 = carry_o $end
+$scope module u_And $end
+$var wire 1 ; a_i $end
+$var wire 1 < b_i $end
+$var wire 1 = out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 ; a_i $end
+$var wire 1 < b_i $end
+$var wire 1 ? out_o $end
+$upscope $end
+$upscope $end
+$scope module u_Or $end
+$var wire 1 > a_i $end
+$var wire 1 = b_i $end
+$var wire 1 @ out_o $end
+$upscope $end
+$upscope $end
+$scope module u13_FullAdder $end
+$var wire 1 A a_i $end
+$var wire 1 B b_i $end
+$var wire 1 C c_i $end
+$var wire 1 D tmp_sum $end
+$var wire 1 E tmp_carry2 $end
+$var wire 1 F tmp_carry1 $end
+$var wire 1 G sum_o $end
+$var wire 1 H carry_o $end
+$scope module u1_HalfAdder $end
+$var wire 1 A a_i $end
+$var wire 1 B b_i $end
+$var wire 1 D sum_o $end
+$var wire 1 F carry_o $end
+$scope module u_And $end
+$var wire 1 A a_i $end
+$var wire 1 B b_i $end
+$var wire 1 F out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 A a_i $end
+$var wire 1 B b_i $end
+$var wire 1 D out_o $end
+$upscope $end
+$upscope $end
+$scope module u2_HalfAdder $end
+$var wire 1 C a_i $end
+$var wire 1 D b_i $end
+$var wire 1 G sum_o $end
+$var wire 1 E carry_o $end
+$scope module u_And $end
+$var wire 1 C a_i $end
+$var wire 1 D b_i $end
+$var wire 1 E out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 C a_i $end
+$var wire 1 D b_i $end
+$var wire 1 G out_o $end
+$upscope $end
+$upscope $end
+$scope module u_Or $end
+$var wire 1 F a_i $end
+$var wire 1 E b_i $end
+$var wire 1 H out_o $end
+$upscope $end
+$upscope $end
+$scope module u14_FullAdder $end
+$var wire 1 I a_i $end
+$var wire 1 J b_i $end
+$var wire 1 K c_i $end
+$var wire 1 L tmp_sum $end
+$var wire 1 M tmp_carry2 $end
+$var wire 1 N tmp_carry1 $end
+$var wire 1 O sum_o $end
+$var wire 1 P carry_o $end
+$scope module u1_HalfAdder $end
+$var wire 1 I a_i $end
+$var wire 1 J b_i $end
+$var wire 1 L sum_o $end
+$var wire 1 N carry_o $end
+$scope module u_And $end
+$var wire 1 I a_i $end
+$var wire 1 J b_i $end
+$var wire 1 N out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 I a_i $end
+$var wire 1 J b_i $end
+$var wire 1 L out_o $end
+$upscope $end
+$upscope $end
+$scope module u2_HalfAdder $end
+$var wire 1 K a_i $end
+$var wire 1 L b_i $end
+$var wire 1 O sum_o $end
+$var wire 1 M carry_o $end
+$scope module u_And $end
+$var wire 1 K a_i $end
+$var wire 1 L b_i $end
+$var wire 1 M out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 K a_i $end
+$var wire 1 L b_i $end
+$var wire 1 O out_o $end
+$upscope $end
+$upscope $end
+$scope module u_Or $end
+$var wire 1 N a_i $end
+$var wire 1 M b_i $end
+$var wire 1 P out_o $end
+$upscope $end
+$upscope $end
+$scope module u15_FullAdder $end
+$var wire 1 Q a_i $end
+$var wire 1 R b_i $end
+$var wire 1 S c_i $end
+$var wire 1 T tmp_sum $end
+$var wire 1 U tmp_carry2 $end
+$var wire 1 V tmp_carry1 $end
+$var wire 1 W sum_o $end
+$var wire 1 X carry_o $end
+$scope module u1_HalfAdder $end
+$var wire 1 Q a_i $end
+$var wire 1 R b_i $end
+$var wire 1 T sum_o $end
+$var wire 1 V carry_o $end
+$scope module u_And $end
+$var wire 1 Q a_i $end
+$var wire 1 R b_i $end
+$var wire 1 V out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 Q a_i $end
+$var wire 1 R b_i $end
+$var wire 1 T out_o $end
+$upscope $end
+$upscope $end
+$scope module u2_HalfAdder $end
+$var wire 1 S a_i $end
+$var wire 1 T b_i $end
+$var wire 1 W sum_o $end
+$var wire 1 U carry_o $end
+$scope module u_And $end
+$var wire 1 S a_i $end
+$var wire 1 T b_i $end
+$var wire 1 U out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 S a_i $end
+$var wire 1 T b_i $end
+$var wire 1 W out_o $end
+$upscope $end
+$upscope $end
+$scope module u_Or $end
+$var wire 1 V a_i $end
+$var wire 1 U b_i $end
+$var wire 1 X out_o $end
+$upscope $end
+$upscope $end
+$scope module u1_FullAdder $end
+$var wire 1 Y a_i $end
+$var wire 1 Z b_i $end
+$var wire 1 [ c_i $end
+$var wire 1 \ tmp_sum $end
+$var wire 1 ] tmp_carry2 $end
+$var wire 1 ^ tmp_carry1 $end
+$var wire 1 _ sum_o $end
+$var wire 1 ` carry_o $end
+$scope module u1_HalfAdder $end
+$var wire 1 Y a_i $end
+$var wire 1 Z b_i $end
+$var wire 1 \ sum_o $end
+$var wire 1 ^ carry_o $end
+$scope module u_And $end
+$var wire 1 Y a_i $end
+$var wire 1 Z b_i $end
+$var wire 1 ^ out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 Y a_i $end
+$var wire 1 Z b_i $end
+$var wire 1 \ out_o $end
+$upscope $end
+$upscope $end
+$scope module u2_HalfAdder $end
+$var wire 1 [ a_i $end
+$var wire 1 \ b_i $end
+$var wire 1 _ sum_o $end
+$var wire 1 ] carry_o $end
+$scope module u_And $end
+$var wire 1 [ a_i $end
+$var wire 1 \ b_i $end
+$var wire 1 ] out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 [ a_i $end
+$var wire 1 \ b_i $end
+$var wire 1 _ out_o $end
+$upscope $end
+$upscope $end
+$scope module u_Or $end
+$var wire 1 ^ a_i $end
+$var wire 1 ] b_i $end
+$var wire 1 ` out_o $end
+$upscope $end
+$upscope $end
+$scope module u2_FullAdder $end
+$var wire 1 a a_i $end
+$var wire 1 b b_i $end
+$var wire 1 c c_i $end
+$var wire 1 d tmp_sum $end
+$var wire 1 e tmp_carry2 $end
+$var wire 1 f tmp_carry1 $end
+$var wire 1 g sum_o $end
+$var wire 1 h carry_o $end
+$scope module u1_HalfAdder $end
+$var wire 1 a a_i $end
+$var wire 1 b b_i $end
+$var wire 1 d sum_o $end
+$var wire 1 f carry_o $end
+$scope module u_And $end
+$var wire 1 a a_i $end
+$var wire 1 b b_i $end
+$var wire 1 f out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 a a_i $end
+$var wire 1 b b_i $end
+$var wire 1 d out_o $end
+$upscope $end
+$upscope $end
+$scope module u2_HalfAdder $end
+$var wire 1 c a_i $end
+$var wire 1 d b_i $end
+$var wire 1 g sum_o $end
+$var wire 1 e carry_o $end
+$scope module u_And $end
+$var wire 1 c a_i $end
+$var wire 1 d b_i $end
+$var wire 1 e out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 c a_i $end
+$var wire 1 d b_i $end
+$var wire 1 g out_o $end
+$upscope $end
+$upscope $end
+$scope module u_Or $end
+$var wire 1 f a_i $end
+$var wire 1 e b_i $end
+$var wire 1 h out_o $end
+$upscope $end
+$upscope $end
+$scope module u3_FullAdder $end
+$var wire 1 i a_i $end
+$var wire 1 j b_i $end
+$var wire 1 k c_i $end
+$var wire 1 l tmp_sum $end
+$var wire 1 m tmp_carry2 $end
+$var wire 1 n tmp_carry1 $end
+$var wire 1 o sum_o $end
+$var wire 1 p carry_o $end
+$scope module u1_HalfAdder $end
+$var wire 1 i a_i $end
+$var wire 1 j b_i $end
+$var wire 1 l sum_o $end
+$var wire 1 n carry_o $end
+$scope module u_And $end
+$var wire 1 i a_i $end
+$var wire 1 j b_i $end
+$var wire 1 n out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 i a_i $end
+$var wire 1 j b_i $end
+$var wire 1 l out_o $end
+$upscope $end
+$upscope $end
+$scope module u2_HalfAdder $end
+$var wire 1 k a_i $end
+$var wire 1 l b_i $end
+$var wire 1 o sum_o $end
+$var wire 1 m carry_o $end
+$scope module u_And $end
+$var wire 1 k a_i $end
+$var wire 1 l b_i $end
+$var wire 1 m out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 k a_i $end
+$var wire 1 l b_i $end
+$var wire 1 o out_o $end
+$upscope $end
+$upscope $end
+$scope module u_Or $end
+$var wire 1 n a_i $end
+$var wire 1 m b_i $end
+$var wire 1 p out_o $end
+$upscope $end
+$upscope $end
+$scope module u4_FullAdder $end
+$var wire 1 q a_i $end
+$var wire 1 r b_i $end
+$var wire 1 s c_i $end
+$var wire 1 t tmp_sum $end
+$var wire 1 u tmp_carry2 $end
+$var wire 1 v tmp_carry1 $end
+$var wire 1 w sum_o $end
+$var wire 1 x carry_o $end
+$scope module u1_HalfAdder $end
+$var wire 1 q a_i $end
+$var wire 1 r b_i $end
+$var wire 1 t sum_o $end
+$var wire 1 v carry_o $end
+$scope module u_And $end
+$var wire 1 q a_i $end
+$var wire 1 r b_i $end
+$var wire 1 v out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 q a_i $end
+$var wire 1 r b_i $end
+$var wire 1 t out_o $end
+$upscope $end
+$upscope $end
+$scope module u2_HalfAdder $end
+$var wire 1 s a_i $end
+$var wire 1 t b_i $end
+$var wire 1 w sum_o $end
+$var wire 1 u carry_o $end
+$scope module u_And $end
+$var wire 1 s a_i $end
+$var wire 1 t b_i $end
+$var wire 1 u out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 s a_i $end
+$var wire 1 t b_i $end
+$var wire 1 w out_o $end
+$upscope $end
+$upscope $end
+$scope module u_Or $end
+$var wire 1 v a_i $end
+$var wire 1 u b_i $end
+$var wire 1 x out_o $end
+$upscope $end
+$upscope $end
+$scope module u5_FullAdder $end
+$var wire 1 y a_i $end
+$var wire 1 z b_i $end
+$var wire 1 { c_i $end
+$var wire 1 | tmp_sum $end
+$var wire 1 } tmp_carry2 $end
+$var wire 1 ~ tmp_carry1 $end
+$var wire 1 !" sum_o $end
+$var wire 1 "" carry_o $end
+$scope module u1_HalfAdder $end
+$var wire 1 y a_i $end
+$var wire 1 z b_i $end
+$var wire 1 | sum_o $end
+$var wire 1 ~ carry_o $end
+$scope module u_And $end
+$var wire 1 y a_i $end
+$var wire 1 z b_i $end
+$var wire 1 ~ out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 y a_i $end
+$var wire 1 z b_i $end
+$var wire 1 | out_o $end
+$upscope $end
+$upscope $end
+$scope module u2_HalfAdder $end
+$var wire 1 { a_i $end
+$var wire 1 | b_i $end
+$var wire 1 !" sum_o $end
+$var wire 1 } carry_o $end
+$scope module u_And $end
+$var wire 1 { a_i $end
+$var wire 1 | b_i $end
+$var wire 1 } out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 { a_i $end
+$var wire 1 | b_i $end
+$var wire 1 !" out_o $end
+$upscope $end
+$upscope $end
+$scope module u_Or $end
+$var wire 1 ~ a_i $end
+$var wire 1 } b_i $end
+$var wire 1 "" out_o $end
+$upscope $end
+$upscope $end
+$scope module u6_FullAdder $end
+$var wire 1 #" a_i $end
+$var wire 1 $" b_i $end
+$var wire 1 %" c_i $end
+$var wire 1 &" tmp_sum $end
+$var wire 1 '" tmp_carry2 $end
+$var wire 1 (" tmp_carry1 $end
+$var wire 1 )" sum_o $end
+$var wire 1 *" carry_o $end
+$scope module u1_HalfAdder $end
+$var wire 1 #" a_i $end
+$var wire 1 $" b_i $end
+$var wire 1 &" sum_o $end
+$var wire 1 (" carry_o $end
+$scope module u_And $end
+$var wire 1 #" a_i $end
+$var wire 1 $" b_i $end
+$var wire 1 (" out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 #" a_i $end
+$var wire 1 $" b_i $end
+$var wire 1 &" out_o $end
+$upscope $end
+$upscope $end
+$scope module u2_HalfAdder $end
+$var wire 1 %" a_i $end
+$var wire 1 &" b_i $end
+$var wire 1 )" sum_o $end
+$var wire 1 '" carry_o $end
+$scope module u_And $end
+$var wire 1 %" a_i $end
+$var wire 1 &" b_i $end
+$var wire 1 '" out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 %" a_i $end
+$var wire 1 &" b_i $end
+$var wire 1 )" out_o $end
+$upscope $end
+$upscope $end
+$scope module u_Or $end
+$var wire 1 (" a_i $end
+$var wire 1 '" b_i $end
+$var wire 1 *" out_o $end
+$upscope $end
+$upscope $end
+$scope module u7_FullAdder $end
+$var wire 1 +" a_i $end
+$var wire 1 ," b_i $end
+$var wire 1 -" c_i $end
+$var wire 1 ." tmp_sum $end
+$var wire 1 /" tmp_carry2 $end
+$var wire 1 0" tmp_carry1 $end
+$var wire 1 1" sum_o $end
+$var wire 1 2" carry_o $end
+$scope module u1_HalfAdder $end
+$var wire 1 +" a_i $end
+$var wire 1 ," b_i $end
+$var wire 1 ." sum_o $end
+$var wire 1 0" carry_o $end
+$scope module u_And $end
+$var wire 1 +" a_i $end
+$var wire 1 ," b_i $end
+$var wire 1 0" out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 +" a_i $end
+$var wire 1 ," b_i $end
+$var wire 1 ." out_o $end
+$upscope $end
+$upscope $end
+$scope module u2_HalfAdder $end
+$var wire 1 -" a_i $end
+$var wire 1 ." b_i $end
+$var wire 1 1" sum_o $end
+$var wire 1 /" carry_o $end
+$scope module u_And $end
+$var wire 1 -" a_i $end
+$var wire 1 ." b_i $end
+$var wire 1 /" out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 -" a_i $end
+$var wire 1 ." b_i $end
+$var wire 1 1" out_o $end
+$upscope $end
+$upscope $end
+$scope module u_Or $end
+$var wire 1 0" a_i $end
+$var wire 1 /" b_i $end
+$var wire 1 2" out_o $end
+$upscope $end
+$upscope $end
+$scope module u8_FullAdder $end
+$var wire 1 3" a_i $end
+$var wire 1 4" b_i $end
+$var wire 1 5" c_i $end
+$var wire 1 6" tmp_sum $end
+$var wire 1 7" tmp_carry2 $end
+$var wire 1 8" tmp_carry1 $end
+$var wire 1 9" sum_o $end
+$var wire 1 :" carry_o $end
+$scope module u1_HalfAdder $end
+$var wire 1 3" a_i $end
+$var wire 1 4" b_i $end
+$var wire 1 6" sum_o $end
+$var wire 1 8" carry_o $end
+$scope module u_And $end
+$var wire 1 3" a_i $end
+$var wire 1 4" b_i $end
+$var wire 1 8" out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 3" a_i $end
+$var wire 1 4" b_i $end
+$var wire 1 6" out_o $end
+$upscope $end
+$upscope $end
+$scope module u2_HalfAdder $end
+$var wire 1 5" a_i $end
+$var wire 1 6" b_i $end
+$var wire 1 9" sum_o $end
+$var wire 1 7" carry_o $end
+$scope module u_And $end
+$var wire 1 5" a_i $end
+$var wire 1 6" b_i $end
+$var wire 1 7" out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 5" a_i $end
+$var wire 1 6" b_i $end
+$var wire 1 9" out_o $end
+$upscope $end
+$upscope $end
+$scope module u_Or $end
+$var wire 1 8" a_i $end
+$var wire 1 7" b_i $end
+$var wire 1 :" out_o $end
+$upscope $end
+$upscope $end
+$scope module u9_FullAdder $end
+$var wire 1 ;" a_i $end
+$var wire 1 <" b_i $end
+$var wire 1 =" c_i $end
+$var wire 1 >" tmp_sum $end
+$var wire 1 ?" tmp_carry2 $end
+$var wire 1 @" tmp_carry1 $end
+$var wire 1 A" sum_o $end
+$var wire 1 B" carry_o $end
+$scope module u1_HalfAdder $end
+$var wire 1 ;" a_i $end
+$var wire 1 <" b_i $end
+$var wire 1 >" sum_o $end
+$var wire 1 @" carry_o $end
+$scope module u_And $end
+$var wire 1 ;" a_i $end
+$var wire 1 <" b_i $end
+$var wire 1 @" out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 ;" a_i $end
+$var wire 1 <" b_i $end
+$var wire 1 >" out_o $end
+$upscope $end
+$upscope $end
+$scope module u2_HalfAdder $end
+$var wire 1 =" a_i $end
+$var wire 1 >" b_i $end
+$var wire 1 A" sum_o $end
+$var wire 1 ?" carry_o $end
+$scope module u_And $end
+$var wire 1 =" a_i $end
+$var wire 1 >" b_i $end
+$var wire 1 ?" out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 =" a_i $end
+$var wire 1 >" b_i $end
+$var wire 1 A" out_o $end
+$upscope $end
+$upscope $end
+$scope module u_Or $end
+$var wire 1 @" a_i $end
+$var wire 1 ?" b_i $end
+$var wire 1 B" out_o $end
+$upscope $end
+$upscope $end
+$scope module u_HalfAdder $end
+$var wire 1 C" a_i $end
+$var wire 1 D" b_i $end
+$var wire 1 E" sum_o $end
+$var wire 1 F" carry_o $end
+$scope module u_And $end
+$var wire 1 C" a_i $end
+$var wire 1 D" b_i $end
+$var wire 1 F" out_o $end
+$upscope $end
+$scope module u_Xor $end
+$var wire 1 C" a_i $end
+$var wire 1 D" b_i $end
+$var wire 1 E" out_o $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0F"
+1E"
+1D"
+0C"
+0B"
+0A"
+0@"
+0?"
+0>"
+0="
+0<"
+0;"
+0:"
+09"
+08"
+07"
+06"
+05"
+04"
+03"
+02"
+01"
+00"
+0/"
+0."
+0-"
+0,"
+0+"
+0*"
+0)"
+0("
+0'"
+0&"
+0%"
+0$"
+0#"
+0""
+0!"
+0~
+0}
+0|
+0{
+0z
+0y
+0x
+0w
+0v
+0u
+0t
+0s
+0r
+0q
+0p
+0o
+0n
+0m
+0l
+0k
+0j
+0i
+0h
+0g
+0f
+0e
+0d
+0c
+0b
+0a
+0`
+0_
+0^
+0]
+0\
+0[
+0Z
+0Y
+0X
+0W
+0V
+0U
+0T
+0S
+0R
+0Q
+0P
+0O
+0N
+0M
+0L
+0K
+0J
+0I
+0H
+0G
+0F
+0E
+0D
+0C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+b0 (
+b1 '
+b1 &
+b0 %
+b1 $
+b0 #
+b0 "
+b1 !
+$end
+#20000
+1X
+1U
+1S
+1P
+1M
+1K
+1H
+1E
+1C
+1@
+1=
+1;
+18
+15
+13
+10
+1-
+1+
+1B"
+1?"
+1="
+1:"
+17"
+15"
+12"
+1/"
+1-"
+1*"
+1'"
+1%"
+1""
+1}
+1{
+1x
+1u
+1s
+1p
+1m
+1k
+1h
+1e
+1c
+1`
+1]
+1[
+0_
+0g
+0o
+0w
+0!"
+0)"
+01"
+09"
+0A"
+0/
+07
+0?
+0G
+0O
+0W
+b111111111111111 (
+1F"
+b0 !
+b0 $
+b0 '
+0E"
+1\
+1d
+1l
+1t
+1|
+1&"
+1."
+16"
+1>"
+1,
+14
+1<
+1D
+1L
+1T
+1C"
+1Y
+1a
+1i
+1q
+1y
+1#"
+1+"
+13"
+1;"
+1)
+11
+19
+1A
+1I
+1Q
+b1111111111111111 "
+b1111111111111111 #
+b1111111111111111 %
+#30000
+0s
+0%"
+05"
+0+
+0;
+0K
+0p
+0""
+02"
+0B"
+08
+0H
+0X
+0c
+0m
+1o
+0}
+1!"
+0/"
+11"
+0?"
+1A"
+05
+17
+0E
+1G
+0U
+1W
+0`
+0k
+0{
+0-"
+0="
+03
+0C
+0S
+0]
+1_
+0h
+0x
+0*"
+0:"
+00
+0@
+0P
+0[
+0e
+0g
+0u
+0w
+0'"
+0)"
+07"
+09"
+0-
+0/
+0=
+0?
+0M
+0O
+b0 (
+0F"
+b1010101010101011 !
+b1010101010101011 $
+b1010101010101011 '
+1E"
+0d
+0t
+0&"
+06"
+0,
+0<
+0L
+0C"
+0a
+0q
+0#"
+03"
+0)
+09
+0I
+b1010101010101010 "
+b1010101010101010 #
+b1010101010101010 %
+#40000
+1[
+1_
+0o
+1w
+1)"
+19"
+1?
+0W
+b1 (
+1F"
+b11101111110010 !
+b11101111110010 $
+b11101111110010 '
+0E"
+0\
+0l
+1t
+1&"
+16"
+1<
+0T
+1C"
+0Y
+0i
+1q
+1#"
+13"
+19
+0Q
+b11101111110001 "
+b11101111110001 #
+b11101111110001 %
+#50000
+0_
+0[
+1g
+0)"
+01"
+09"
+07
+0G
+b0 (
+0F"
+b1001000110101 !
+b1001000110101 $
+b1001000110101 '
+1E"
+1d
+0&"
+0."
+06"
+04
+0D
+0C"
+1a
+0#"
+0+"
+03"
+01
+0A
+b1001000110100 "
+b1001000110100 #
+b1001000110100 %
+#60000
+1_
+1)"
+0A"
+17
+b1001100001110111 !
+b1001100001110111 $
+b1001100001110111 '
+1W
+1\
+1&"
+0>"
+14
+1T
+1Y
+1#"
+0;"
+11
+1Q
+b1001100001110110 "
+b1001100001110110 #
+b1001100001110110 %
+#1060000
