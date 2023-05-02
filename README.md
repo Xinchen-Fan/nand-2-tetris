@@ -7,7 +7,11 @@
 - [ALU Specification](./notes/alu-spec.md)
 
 ## Verilog implementation 
+- [chip set](./notes/chip-set.md)
 
+### File directory
+- `vrtl/`: source code for Verilog implementation
+- `vtest/`: testbench, test script and `.vcd` files
 
 
 ### Test
