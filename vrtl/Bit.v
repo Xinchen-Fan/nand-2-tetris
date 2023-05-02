@@ -2,8 +2,9 @@
 
 Bit u_Bit(
     .clk_i(),
-    .din_i(),
-    .dout_o()
+    .in_i(),
+    .load_i(),
+    .out_o()
 );
 
 */
@@ -12,11 +13,17 @@ Bit u_Bit(
 
 module Bit(
     input wire clk_i,
-    input wire din_i,
-    output reg dout_o
+    input wire in_i,
+    input wire load_i,
+    output wire out_o
 );
-    always @(posedge clk_i) begin
-        dout_o <= din_i;
-    end
+
+    wire in_new = load_i ? in_i : out_o;
+    
+    DFF u_DFF(
+        .clk_i(clk_i),
+        .in_i(in_new),
+        .out_o(out_o)
+    );
 
 endmodule
