@@ -8,7 +8,7 @@ def main():
     test_dir = r'vtest/'
     rtl_dir = r'vrtl/'
     tb_file = test_dir + sys.argv[1] + r'_tb.v'
-    rtl_file = rtl_dir + sys.argv[1] + r'.v'
+    # rtl_file = rtl_dir + sys.argv[1] + r'.v'
 
     
     # compile rtl by iverilog
@@ -20,7 +20,7 @@ def main():
     # iverilog_cmd.append(rtl_file) # rtl file
     file = os.listdir(rtl_dir)
     for f in file:
-        iverilog_cmd.append(rtl_dir + f)
+        iverilog_cmd.append(rtl_dir + f) # rtl file
     process = subprocess.Popen(iverilog_cmd)
     process.wait(timeout=5)
 
