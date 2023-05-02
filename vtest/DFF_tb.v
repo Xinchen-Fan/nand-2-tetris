@@ -8,8 +8,8 @@ module DFF_tb();
 
     DFF u_DFF(
         .clk_i(clk),
-        .din_i(din),
-        .dout_o(dout)
+        .in_i(din),
+        .out_o(dout)
     );
 
     always #5 clk = ~clk;

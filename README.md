@@ -4,7 +4,7 @@
 - `tools`: software tools
 - `projects`: files modified and completed for nand2tetris
 
-### Project notes
+### Notes
 - [Nand2Tetris Part I: Hardware](./notes/hardware.md)
 
 ### Resources

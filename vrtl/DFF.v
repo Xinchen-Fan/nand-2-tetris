@@ -2,8 +2,8 @@
 
 DFF u_DFF(
     .clk_i(),
-    .din_i(),
-    .dout_o()
+    .in_i(),
+    .out_o()
 );
 
 */
@@ -12,11 +12,11 @@ DFF u_DFF(
 
 module DFF(
     input wire clk_i,
-    input wire din_i,
-    output reg dout_o
+    input wire in_i,
+    output reg out_o
 );
     always @(posedge clk_i) begin
-        dout_o <= din_i;
+        out_o <= in_i;
     end
 
 endmodule
