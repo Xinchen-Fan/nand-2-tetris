@@ -26,3 +26,4 @@
 | 21 | `DFF` | DFF.v | 1-bit D Flip-Flop |
 | 22 | `Bit` | Bit.v | 1-bit register |
 | 23 | `Register` | Register.v | 16-bit register |
+| 24 | `RAM8` | RAM8.v | 8-word RAM |
