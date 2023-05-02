@@ -21,7 +21,7 @@ module RAM8(
 );
 
     wire [7:0] load_real;
-    wire [15:0] out_tmp[0:7];
+    wire [15:0] out_tmp [0:7];
 
     Register u1_Register(.clk_i(clk_i), .in_i(in_i), .load_i(load_real[0]), .out_o(out_tmp[0]));
     Register u2_Register(.clk_i(clk_i), .in_i(in_i), .load_i(load_real[1]), .out_o(out_tmp[1]));
