@@ -28,7 +28,8 @@
 | 16 | `DMux8Way` | DMux8Way.v | 8-way 1-bit demultiplexor |
 | 17 | `HalfAdder` | HalfAdder.v | 1-bit half adder |
 | 18 | `FullAdder` | FullAdder.v | 1-bit full adder |
-| 19 | `Add16` | Add16.v | Adds up two 16-bit two's complement values |
+| 19 | `Add16` | Add16.v | add up two 16-bit two's complement values |
+| 20 | `Inc16` | Inc16.v | set out to in + 1 |
 
 ### Test
 run unit test:
