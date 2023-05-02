@@ -23,8 +23,10 @@
 | 19 | `Add16` | Add16.v | add up two 16-bit two's complement values |
 | 20 | `Inc16` | Inc16.v | set out to in + 1 |
 | 21 | `ALU` | ALU.v | 16-bit Arithmetic Logic Unit |
-| 21 | `DFF` | DFF.v | 1-bit D Flip-Flop |
-| 22 | `Bit` | Bit.v | 1-bit register |
-| 23 | `Register` | Register.v | 16-bit register |
-| 24 | `RAM8` | RAM8.v | 8-word RAM |
-| 25 | `RAM64` | RAM64.v | 64-word RAM |
+| 22 | `DFF` | DFF.v | 1-bit D Flip-Flop |
+| 23 | `Bit` | Bit.v | 1-bit register |
+| 24 | `Register` | Register.v | 16-bit register |
+| 25 | `RAM8` | RAM8.v | 8-word RAM |
+| 26 | `RAM64` | RAM64.v | 64-word RAM |
+| 27 | `RAM512` | RAM512.v | 512-word RAM |
+| 28 | `PC` | PC.v | program counter |
