@@ -4,6 +4,7 @@
 
 ## Project notes
 - [Nand2Tetris Part I: Hardware](./notes/hardware.md)
+- [ALU Specification](./notes/alu-spec.md)
 
 ## Verilog implementation 
 ### Chip set
@@ -30,6 +31,7 @@
 | 18 | `FullAdder` | FullAdder.v | 1-bit full adder |
 | 19 | `Add16` | Add16.v | add up two 16-bit two's complement values |
 | 20 | `Inc16` | Inc16.v | set out to in + 1 |
+| 21 | `ALU` | ALU.v | 16-bit Arithmetic Logic Unit |
 
 
 ### Test
