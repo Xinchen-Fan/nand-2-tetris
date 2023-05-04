@@ -26,8 +26,8 @@
 | 22 | `DFF` | DFF.v | 1-bit D Flip-Flop | :heavy_check_mark: |
 | 23 | `Bit` | Bit.v | 1-bit register | :heavy_check_mark: |
 | 24 | `Register` | Register.v | 16-bit register | :heavy_check_mark: |
-| 28 | `PC` | PC.v | program counter | :heavy_check_mark: |
-| ? | `ram` | ram.v | 32k-ram |
-| ? | `rom` | rom.v | 32k-rom | :heavy_check_mark: |
-| ? | `CPU` | CPU.v | CPU | :heavy_check_mark: |
-| ? | `Computer` | Computer.v | Computer | :heavy_check_mark: |
+| 25 | `PC` | PC.v | program counter | :heavy_check_mark: |
+| 26 | `ram` | ram.v | 32k-word RAM |  |
+| 27 | `rom` | rom.v | 32k-word ROM | :heavy_check_mark: |
+| 28 | `CPU` | CPU.v | CPU |  |
+| 29 | `Computer` | Computer.v | Computer | :heavy_check_mark: |

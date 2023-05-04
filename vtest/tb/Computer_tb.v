@@ -26,7 +26,7 @@ module Computer_tb();
     end
 
     initial begin
-        $readmemb("vtest/hack_program/Max.hack", u_Computer.u_rom._rom);
+        $readmemb("vtest/program.hack", u_Computer.u_rom._rom);
     end
 
     initial begin

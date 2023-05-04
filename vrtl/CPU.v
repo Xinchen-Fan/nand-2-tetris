@@ -1,26 +1,12 @@
 /* CPU
 
-CHIP CPU {
-
-    IN  inM[16],         // M value input  (M = contents of RAM[A])
-        instruction[16], // Instruction for execution
-        reset;           // Signals whether to re-start the current
-                         // program (reset==1) or continue executing
-                         // the current program (reset==0).
-
-    OUT outM[16],        // M value output
-        writeM,          // Write to M? 
-        addressM[15],    // Address in data memory (of M)
-        pc[15];          // address of next instruction
-
-
 CPU u_CPU(
     .clk_i(),
     .reset_i(),
-    .dmem_data_i(),
+    .data_i(),
     .inst_i(),
-    .dmem_data_o(),
-    .write_en_o(),
+    .data_o(),
+    .dmem_wr_en_o(),
     .dmem_addr_o(),
     .pc_o()
 );
@@ -31,10 +17,10 @@ CPU u_CPU(
  module CPU(
     input wire clk_i,
     input wire reset_i,
-    input wire [15:0] dmem_data_i,
+    input wire [15:0] data_i,
     input wire [15:0] inst_i,
-    output wire [15:0] dmem_data_o,
-    output wire write_en_o,
+    output wire [15:0] data_o,
+    output wire dmem_wr_en_o,
     output wire [14:0] dmem_addr_o,
     output wire [14:0] pc_o
 
@@ -60,8 +46,8 @@ CPU u_CPU(
     assign j1 = inst_i[15] & inst_i[2];
     assign j2 = inst_i[15] & inst_i[1];
     assign j3 = inst_i[15] & inst_i[0];
-    assign write_en_o = d3;
-    assign dmem_data_o = alu_out_buf;
+    assign dmem_wr_en_o = d3;
+    assign data_o = alu_out_buf;
     assign a_reg_load = (~inst_i[15]) | d1;
     assign dmem_addr_o = a_reg_out[14:0]; // get addressM
     assign jump = (j1 & ng_alu) | (j2 & zr_alu) | (j3 & (~ng_alu) & (~zr_alu));  // get jump 
@@ -75,10 +61,18 @@ CPU u_CPU(
     );
 
     Mux16 u1_Mux16(.a_i(inst_i), .b_i(alu_out_buf), .sel_i(inst_i[15]), .out_o(a_reg_in)); // choose AReg input
+    Mux16 u2_Mux16(.a_i(a_reg_out), .b_i(data_i), .sel_i(inst_i[12]), .out_o(y_alu)); // choose ALU input
     Register u_ARegister(.clk_i(clk_i), .in_i(a_reg_in), .load_i(a_reg_load), .out_o(a_reg_out)); // A-Register
     Register u_DRegister(.clk_i(clk_i), .in_i(alu_out_buf), .load_i(d2), .out_o(x_alu)); // D-Register
-    Mux16 u2_Mux16(.a_i(a_reg_out), .b_i(dmem_data_i), .sel_i(inst_i[12]), .out_o(y_alu)); // choose ALU input
-    PC u_PC(.clk_i(clk_i), .in_i(a_reg_out), .load_i(jump), .inc_i(~jump), .reset_i(reset_i), .out_o(pc_buf));
+    
+    PC u_PC(
+        .clk_i(clk_i), 
+        .in_i(a_reg_out), 
+        .load_i(jump), 
+        .inc_i(~jump), 
+        .reset_i(reset_i), 
+        .out_o(pc_buf)
+    );
 
 endmodule
 
