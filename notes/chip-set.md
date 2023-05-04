@@ -1,7 +1,7 @@
 # Verilog chip set
 
 | count | name | file | spec | tested |
-| :--------: | :--------: | :--------: | :--------: |
+| :--------: | :--------: | :--------: | :--------: | :--------: |
 | 01 | `Nand` | Nand.v | 1-bit nand gate | :check_mark: |
 | 02 | `Not` | Not.v | 1-bit not gate | :check_mark: |
 | 03 | `And` | And.v | 1-bit and gate | :check_mark: |
