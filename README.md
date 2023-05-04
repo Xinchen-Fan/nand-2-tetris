@@ -25,7 +25,7 @@
 run unit test:
 
 ```sh
-python ./vtest/unit_test.py <module name>
+python ./vtest/tester.py <module name>
 ```
 
 
