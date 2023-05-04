@@ -30,7 +30,6 @@
 | 26 | `RAM64` | RAM64.v | 64-word RAM |
 | 27 | `RAM512` | RAM512.v | 512-word RAM |
 | 28 | `PC` | PC.v | program counter |
-
 | ? | `ram` | ram.v | 32k-ram |
 | ? | `rom` | rom.v | 32k-rom |
 | ? | `CPU` | CPU.v | CPU |
