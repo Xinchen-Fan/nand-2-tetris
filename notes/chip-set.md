@@ -23,14 +23,11 @@
 | 19 | `Add16` | Add16.v | add up two 16-bit two's complement values | :heavy_check_mark: |
 | 20 | `Inc16` | Inc16.v | set out to in + 1 | :heavy_check_mark: |
 | 21 | `ALU` | ALU.v | 16-bit Arithmetic Logic Unit | :heavy_check_mark: |
-| 22 | `DFF` | DFF.v | 1-bit D Flip-Flop |
-| 23 | `Bit` | Bit.v | 1-bit register |
-| 24 | `Register` | Register.v | 16-bit register |
-| 25 | `RAM8` | RAM8.v | 8-word RAM |
-| 26 | `RAM64` | RAM64.v | 64-word RAM |
-| 27 | `RAM512` | RAM512.v | 512-word RAM |
-| 28 | `PC` | PC.v | program counter |
+| 22 | `DFF` | DFF.v | 1-bit D Flip-Flop | :heavy_check_mark: |
+| 23 | `Bit` | Bit.v | 1-bit register | :heavy_check_mark: |
+| 24 | `Register` | Register.v | 16-bit register | :heavy_check_mark: |
+| 28 | `PC` | PC.v | program counter | :heavy_check_mark: |
 | ? | `ram` | ram.v | 32k-ram |
-| ? | `rom` | rom.v | 32k-rom |
-| ? | `CPU` | CPU.v | CPU |
-| ? | `Computer` | Computer.v | Computer |
+| ? | `rom` | rom.v | 32k-rom | :heavy_check_mark: |
+| ? | `CPU` | CPU.v | CPU | :heavy_check_mark: |
+| ? | `Computer` | Computer.v | Computer | :heavy_check_mark: |
