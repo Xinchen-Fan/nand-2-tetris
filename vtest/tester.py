@@ -7,7 +7,7 @@ def main():
     # dirs and files
     test_dir = r'vtest/'
     rtl_dir = r'vrtl/'
-    tb_file = test_dir + sys.argv[1] + r'_tb.v'
+    tb_file = test_dir + r'tb/' + sys.argv[1] + r'_tb.v'
     # rtl_file = rtl_dir + sys.argv[1] + r'.v'
 
     
