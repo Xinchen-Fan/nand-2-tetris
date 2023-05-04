@@ -1,28 +1,28 @@
 # Verilog chip set
 
-| count | name | file | spec |
+| count | name | file | spec | tested |
 | :--------: | :--------: | :--------: | :--------: |
-| 01 | `Nand` | Nand.v | 1-bit nand gate |
-| 02 | `Not` | Not.v | 1-bit not gate |
-| 03 | `And` | And.v | 1-bit and gate |
-| 04 | `Or` | Or.v | 1-bit or gate |
-| 05 | `Xor` | Xor.v | 1-bit xor gate |
-| 06 | `Mux` | Mux.v | 1-bit multiplexor |
-| 07 | `DMux` | DMux.v | 1-bit demultiplexor |
-| 08 | `Not16` | Not16.v | 16-bit not gate |
-| 09 | `And16` | And16.v | 16-bit and gate |
-| 10 | `Or16` | Or16.v | 16-bit or gate |
-| 11 | `Mux16` | Mux16.v | 16-bit multiplexor |
-| 12 | `Or8Way` | Or8Way.v | 8-way or gate |
-| 13 | `Mux4Way16` | Mux4Way16.v | 4-way 16-bit multiplexor |
-| 14 | `Mux8Way16` | Mux8Way16.v | 8-way 16-bit multiplexor |
-| 15 | `DMux4Way` | DMux4Way.v | 4-way 1-bit demultiplexor |
-| 16 | `DMux8Way` | DMux8Way.v | 8-way 1-bit demultiplexor |
-| 17 | `HalfAdder` | HalfAdder.v | 1-bit half adder |
-| 18 | `FullAdder` | FullAdder.v | 1-bit full adder |
-| 19 | `Add16` | Add16.v | add up two 16-bit two's complement values |
-| 20 | `Inc16` | Inc16.v | set out to in + 1 |
-| 21 | `ALU` | ALU.v | 16-bit Arithmetic Logic Unit |
+| 01 | `Nand` | Nand.v | 1-bit nand gate | :check_mark: |
+| 02 | `Not` | Not.v | 1-bit not gate | :check_mark: |
+| 03 | `And` | And.v | 1-bit and gate | :check_mark: |
+| 04 | `Or` | Or.v | 1-bit or gate | :check_mark: |
+| 05 | `Xor` | Xor.v | 1-bit xor gate | :check_mark: |
+| 06 | `Mux` | Mux.v | 1-bit multiplexor | :check_mark: |
+| 07 | `DMux` | DMux.v | 1-bit demultiplexor | :check_mark: |
+| 08 | `Not16` | Not16.v | 16-bit not gate | :check_mark: |
+| 09 | `And16` | And16.v | 16-bit and gate | :check_mark: |
+| 10 | `Or16` | Or16.v | 16-bit or gate | :check_mark: |
+| 11 | `Mux16` | Mux16.v | 16-bit multiplexor | :check_mark: |
+| 12 | `Or8Way` | Or8Way.v | 8-way or gate | :check_mark: |
+| 13 | `Mux4Way16` | Mux4Way16.v | 4-way 16-bit multiplexor | :check_mark: |
+| 14 | `Mux8Way16` | Mux8Way16.v | 8-way 16-bit multiplexor | :check_mark: |
+| 15 | `DMux4Way` | DMux4Way.v | 4-way 1-bit demultiplexor | :check_mark: |
+| 16 | `DMux8Way` | DMux8Way.v | 8-way 1-bit demultiplexor | :check_mark: |
+| 17 | `HalfAdder` | HalfAdder.v | 1-bit half adder | :check_mark: |
+| 18 | `FullAdder` | FullAdder.v | 1-bit full adder | :check_mark: |
+| 19 | `Add16` | Add16.v | add up two 16-bit two's complement values | :check_mark: |
+| 20 | `Inc16` | Inc16.v | set out to in + 1 | :check_mark: |
+| 21 | `ALU` | ALU.v | 16-bit Arithmetic Logic Unit | :check_mark: |
 | 22 | `DFF` | DFF.v | 1-bit D Flip-Flop |
 | 23 | `Bit` | Bit.v | 1-bit register |
 | 24 | `Register` | Register.v | 16-bit register |
@@ -30,3 +30,8 @@
 | 26 | `RAM64` | RAM64.v | 64-word RAM |
 | 27 | `RAM512` | RAM512.v | 512-word RAM |
 | 28 | `PC` | PC.v | program counter |
+
+| ? | `ram` | ram.v | 32k-ram |
+| ? | `rom` | rom.v | 32k-rom |
+| ? | `CPU` | CPU.v | CPU |
+| ? | `Computer` | Computer.v | Computer |
