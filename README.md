@@ -18,8 +18,7 @@
 - `vtest/`: testbench, test script and `.vcd` files
 
 ### Notes
-- [chip set](./notes/chip-set.md)
-- [ALU Specification](./notes/alu-spec.md)
+- [Specification](./notes/verilog-spec.md)
 
 ### Test
 run unit test:

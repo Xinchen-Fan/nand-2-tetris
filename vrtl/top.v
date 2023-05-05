@@ -1,14 +1,16 @@
-module Computer(
+`include "defines.v"
+
+module top(
     input wire clk,
     input wire reset
 );
 
-    wire [14:0] pc;
-    wire [15:0] instruction;
+    wire [`InstAddrWidth-1:0] pc;
+    wire [`InstWidth-1:0] instruction;
     wire dmem_en;
-    wire [14:0] dmem_addr;
-    wire [15:0] data_out;
-    wire [15:0] data_in;
+    wire [`DataAddrWidth-1:0] dmem_addr;
+    wire [`DataWidth-1:0] data_out;
+    wire [`DataWidth-1:0] data_in;
 
     ram u_ram(
         .clk_i(clk), 
@@ -24,7 +26,7 @@ module Computer(
         .data_o(instruction)
     );
 
-    CPU u_CPU(
+    hackcore u_hackcore(
         .clk_i(clk),
         .reset_i(reset),
         .data_i(data_in),

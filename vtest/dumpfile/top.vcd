@@ -1,5 +1,5 @@
 $date
-	Fri May  5 16:04:53 2023
+	Fri May  5 16:15:29 2023
 $end
 $version
 	Icarus Verilog
@@ -7,10 +7,10 @@ $end
 $timescale
 	1ps
 $end
-$scope module Computer_tb $end
+$scope module top_tb $end
 $var reg 1 ! clk $end
 $var reg 1 " rst $end
-$scope module u_Computer $end
+$scope module u_top $end
 $var wire 1 ! clk $end
 $var wire 1 " reset $end
 $var wire 15 # pc [14:0] $end
@@ -19,7 +19,7 @@ $var wire 1 % dmem_en $end
 $var wire 15 & dmem_addr [14:0] $end
 $var wire 16 ' data_out [15:0] $end
 $var wire 16 ( data_in [15:0] $end
-$scope module u_CPU $end
+$scope module u_hackcore $end
 $var wire 1 ) a_reg_load $end
 $var wire 1 ! clk_i $end
 $var wire 1 * d1 $end

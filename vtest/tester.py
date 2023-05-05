@@ -11,7 +11,7 @@ def main():
     # compile rtl by iverilog
     iverilog_cmd = ['iverilog'] # iverilog
     iverilog_cmd += ['-o', test_dir + r'dumpfile/out.vvp'] # compile result
-    iverilog_cmd += ['-I', rtl_dir] # path for verilog head(defs.v)
+    iverilog_cmd += ['-I', rtl_dir] # path for verilog head(defines.v)
     iverilog_cmd += ['-D', r'OUTPUT="signature.output"'] # simulation output file
     iverilog_cmd.append(tb_file) # testbench
     file = os.listdir(rtl_dir)
