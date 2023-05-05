@@ -19,7 +19,7 @@ module ram(
     input wire load_i,           // write enable
     input wire [14:0] addr_i,    // addr
     input wire [15:0] data_i,
-    output reg [15:0] data_o         // read data
+    output wire [15:0] data_o         // read data
 
     );
 
@@ -29,17 +29,10 @@ module ram(
 
     always @ (posedge clk_i) begin
         if (load_i == 1'b1) begin
-            _ram[addr_i[14:0]] <= data_i;
+            _ram[addr_i] <= data_i;
         end
     end
 
-    always @ (*) begin
-        if(reset_i == 1'b1) begin
-            data_o = 16'b0;
-        end
-        else begin
-            data_o = _ram[addr_i[14:0]];
-        end
-    end
+    assign data_o = reset_i ? 16'b0 : _ram[addr_i];
 
 endmodule
