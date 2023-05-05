@@ -12,7 +12,7 @@
 - Coursera - [Nand2Tetris Part I](https://www.coursera.org/learn/build-a-computer) and [Nand2Tetris Part II](https://www.coursera.org/learn/nand2tetris2)
 
 
-## Implement Hack CPU in Verilog (with unit test)
+## Implement Hack CPU in Verilog
 ### Tools
 - Icarus Verilog + GTKWave + Python
 
