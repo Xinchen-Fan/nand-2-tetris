@@ -14,8 +14,8 @@
 
 ## Implement Hack CPU in Verilog (with unit test)
 ### File directory
-- `vrtl/`: source code for Verilog implementation
-- `vtest/`: testbench, test script and `.vcd` files
+- `vrtl/`: RTL code for Hack CPU (Verilog)
+- `vtest/`: testbench, test script and test results
 
 ### Notes
 - [Specification](./notes/verilog-spec.md)
