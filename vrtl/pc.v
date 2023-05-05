@@ -6,34 +6,34 @@
  * else if (inc[t] == 1)   out[t+1] = out[t] + 1  (integer addition)
  * else                    out[t+1] = out[t]
 
-PC u_PC(
-    .clk_i(),
-    .in_i(),
-    .load_i(),
-    .inc_i(),
-    .reset_i(),
-    .out_o()
-);
+    pc u_pc(
+        .clk_i(),
+        .in_i(),
+        .load_i(),
+        .inc_i(),
+        .reset_i(),
+        .out_o()
+    );
 
 
  */
 
 `include "defines.v"
 
- module PC(
+ module pc(
     input wire clk_i,
-    input wire [15:0] in_i,
+    input wire [`DataWidth-1:0] in_i,
     input wire load_i,
     input wire inc_i,
     input wire reset_i,
-    output wire [15:0] out_o
+    output wire [`DataWidth-1:0] out_o
 );
 
-    wire [15:0] in_inc;
-    wire [15:0] in_tmp1;
-    wire [15:0] in_tmp2;
-    wire [15:0] in_new;
-    wire [15:0] out_buf;
+    wire [`DataWidth-1:0] in_inc;
+    wire [`DataWidth-1:0] in_tmp1;
+    wire [`DataWidth-1:0] in_tmp2;
+    wire [`DataWidth-1:0] in_new;
+    wire [`DataWidth-1:0] out_buf;
     assign out_o = out_buf;
 
     assign in_inc = out_buf + 1'b1; // pc+1

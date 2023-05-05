@@ -82,7 +82,7 @@ CPU u_CPU(
         .out_o(x_alu)
     );
     
-    PC u_PC(
+    pc u_pc(
         .clk_i(clk_i), 
         .in_i(a_reg_out), 
         .load_i(jump), 
