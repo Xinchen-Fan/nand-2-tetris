@@ -18,6 +18,8 @@ PC u_PC(
 
  */
 
+`include "defines.v"
+
  module PC(
     input wire clk_i,
     input wire [15:0] in_i,
@@ -37,9 +39,14 @@ PC u_PC(
     assign in_inc = out_buf + 1'b1; // pc+1
     assign in_tmp1 = inc_i ? in_inc : out_buf; // +1 or hold
     assign in_tmp2 = load_i ? in_i : in_tmp1;  // load or (+1 or hold)
-    // assign in_new = reset_i ? 16'b0 : in_tmp2; // reset or (load or (+1 or hold))
 
-    Register #(16, 16'b0) u_Register(.clk_i(clk_i), .in_i(in_tmp2), .reset_i(reset_i), .load_i(1'b1), .out_o(out_buf));
+    register #(.WIDTH(`DataWidth), .RESET_VAL(`PCResetAddr)) u_pc_register(
+        .clk_i(clk_i),
+        .in_i(in_tmp2),
+        .reset_i(reset_i),
+        .load_i(1'b1),
+        .out_o(out_buf)
+    );
 
 
 endmodule

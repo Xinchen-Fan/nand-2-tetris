@@ -1,4 +1,5 @@
 `define ZeroWord 16'b0
+`define PCResetAddr 16'b0
 `define DataWidth 16
 `define InstWidth 16
 

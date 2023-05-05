@@ -14,6 +14,8 @@ CPU u_CPU(
 
  */
 
+`include "defines.v"
+
  module CPU(
     input wire clk_i,
     input wire reset_i,
@@ -62,11 +64,23 @@ CPU u_CPU(
         .f_i(inst_i[7]), .no_i(inst_i[6]), .out_o(alu_out_buf), .zr_o(zr_alu), .ng_o(ng_alu)
     );
 
+    // A-Register
+    register #(.WIDTH(`DataWidth), .RESET_VAL(`ZeroWord)) u_Aregister(
+        .clk_i(clk_i),
+        .in_i(a_reg_in),
+        .reset_i(reset),
+        .load_i(a_reg_load),
+        .out_o(a_reg_out)
+    );
 
-    // Mux16 u1_Mux16(.a_i(inst_i), .b_i(alu_out_buf), .sel_i(inst_i[15]), .out_o(a_reg_in)); 
-    // Mux16 u2_Mux16(.a_i(a_reg_out), .b_i(data_i), .sel_i(inst_i[12]), .out_o(y_alu)); 
-    Register #(16, 16'b0) u_ARegister(.clk_i(clk_i), .in_i(a_reg_in), .reset_i(reset), .load_i(a_reg_load), .out_o(a_reg_out)); // A-Register
-    Register #(16, 16'b0) u_DRegister(.clk_i(clk_i), .in_i(alu_out_buf), .reset_i(reset), .load_i(d2), .out_o(x_alu)); // D-Register
+    // D-Register
+    register #(.WIDTH(`DataWidth), .RESET_VAL(`ZeroWord)) u_Dregister(
+        .clk_i(clk_i),
+        .in_i(alu_out_buf),
+        .reset_i(reset),
+        .load_i(d2),
+        .out_o(x_alu)
+    );
     
     PC u_PC(
         .clk_i(clk_i), 

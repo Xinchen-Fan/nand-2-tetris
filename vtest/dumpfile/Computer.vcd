@@ -1,5 +1,5 @@
 $date
-	Fri May  5 15:35:18 2023
+	Fri May  5 16:00:06 2023
 $end
 $version
 	Icarus Verilog
@@ -45,14 +45,14 @@ $var wire 16 ; data_i [15:0] $end
 $var wire 16 < alu_out_buf [15:0] $end
 $var wire 16 = a_reg_out [15:0] $end
 $var wire 16 > a_reg_in [15:0] $end
-$scope module u_ARegister $end
+$scope module u_Aregister $end
 $var wire 1 ! clk_i $end
 $var wire 16 ? in_i [15:0] $end
 $var wire 1 ) load_i $end
 $var wire 1 2 reset_i $end
 $var reg 16 @ out_o [15:0] $end
 $upscope $end
-$scope module u_DRegister $end
+$scope module u_Dregister $end
 $var wire 1 ! clk_i $end
 $var wire 1 + load_i $end
 $var wire 1 2 reset_i $end
@@ -70,7 +70,7 @@ $var wire 16 F out_buf [15:0] $end
 $var wire 16 G in_tmp2 [15:0] $end
 $var wire 16 H in_tmp1 [15:0] $end
 $var wire 16 I in_inc [15:0] $end
-$scope module u_Register $end
+$scope module u_pc_register $end
 $var wire 1 ! clk_i $end
 $var wire 16 J in_i [15:0] $end
 $var wire 1 K load_i $end
