@@ -13,6 +13,9 @@
 
 
 ## Implement Hack CPU in Verilog (with unit test)
+### Tools
+- Icarus Verilog + GTKWave + Python
+
 ### File directory
 - `vrtl/`: RTL code for Hack CPU (Verilog)
 - `vtest/`: testbench, test script and test results
@@ -21,14 +24,14 @@
 - [Specification](./notes/verilog-spec.md)
 
 ### Test
-run unit test(in the root directory):
+- run unit test(in the root directory):
 
 ```sh
 python ./vtest/tester.py <module name>
 ```
 
 ### Usage
-compile the software into machine code and save it to `/vtest/inst.data`, write the corresponding testbench in `/vtest/tb/top_tb.v` and run(in the root directory):
+- compile the software into machine code and save it to `/vtest/inst.data`, write the corresponding testbench in `/vtest/tb/top_tb.v` and run(in the root directory):
 
 ```sh
 python ./vtest/tester.py top
