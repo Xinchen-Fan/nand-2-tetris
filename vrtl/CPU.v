@@ -52,6 +52,8 @@ CPU u_CPU(
     assign dmem_addr_o = a_reg_out[14:0]; // get addressM
     assign jump = (j1 & ng_alu) | (j2 & zr_alu) | (j3 & (~ng_alu) & (~zr_alu));  // get jump 
     assign pc_o = pc_buf[14:0];
+    assign a_reg_in = inst_i[15] ? alu_out_buf : inst_i; // choose AReg input
+    assign y_alu = inst_i[12] ? data_i : a_reg_out; // choose ALU input
     
 
     ALU u_ALU(
@@ -60,8 +62,9 @@ CPU u_CPU(
         .f_i(inst_i[7]), .no_i(inst_i[6]), .out_o(alu_out_buf), .zr_o(zr_alu), .ng_o(ng_alu)
     );
 
-    Mux16 u1_Mux16(.a_i(inst_i), .b_i(alu_out_buf), .sel_i(inst_i[15]), .out_o(a_reg_in)); // choose AReg input
-    Mux16 u2_Mux16(.a_i(a_reg_out), .b_i(data_i), .sel_i(inst_i[12]), .out_o(y_alu)); // choose ALU input
+
+    // Mux16 u1_Mux16(.a_i(inst_i), .b_i(alu_out_buf), .sel_i(inst_i[15]), .out_o(a_reg_in)); 
+    // Mux16 u2_Mux16(.a_i(a_reg_out), .b_i(data_i), .sel_i(inst_i[12]), .out_o(y_alu)); 
     Register u_ARegister(.clk_i(clk_i), .in_i(a_reg_in), .load_i(a_reg_load), .out_o(a_reg_out)); // A-Register
     Register u_DRegister(.clk_i(clk_i), .in_i(alu_out_buf), .load_i(d2), .out_o(x_alu)); // D-Register
     
