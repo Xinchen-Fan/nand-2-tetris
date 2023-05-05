@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module ALU_tb();
+module alu_tb();
     reg [15:0] in_x;
     reg [15:0] in_y;
     reg z_x;
@@ -13,7 +13,7 @@ module ALU_tb();
     wire zr;
     wire ng;
 
-    ALU u_ALU(
+    alu u_alu(
         .x_i(in_x),
         .y_i(in_y),
         .zx_i(z_x),
@@ -74,8 +74,8 @@ module ALU_tb();
     end
 
     initial begin
-        $dumpfile("vtest/dumpfile/ALU.vcd");
-	    $dumpvars(0,ALU_tb);
+        $dumpfile("vtest/dumpfile/alu.vcd");
+	    $dumpvars(0,alu_tb);
 	end
 
 endmodule

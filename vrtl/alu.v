@@ -22,7 +22,7 @@ if (no == 1) set out = ~out   // bitwise not
 if (out == 0) set zr = 1
 if (out < 0) set ng = 1
 
-ALU u_ALU(
+alu u_alu(
     .x_i(),
     .y_i(),
     .zx_i(),
@@ -38,43 +38,39 @@ ALU u_ALU(
 
 */
 
+`include "defines.v"
 
-module ALU(
-    input wire [15:0] x_i,
-    input wire [15:0] y_i,
+module alu(
+    input wire [`DataWidth-1:0] x_i,
+    input wire [`DataWidth-1:0] y_i,
     input wire zx_i,
     input wire nx_i,
     input wire zy_i,
     input wire ny_i,
     input wire f_i,
     input wire no_i,
-    output wire [15:0] out_o,
+    output wire [`DataWidth-1:0] out_o,
     output wire zr_o,
     output wire ng_o
 );
 
-    wire [15:0] zx_tmp;
-    wire [15:0] notx_tmp;
-    wire [15:0] x_tmp;
-    wire [15:0] zy_tmp;
-    wire [15:0] noty_tmp;
-    wire [15:0] y_tmp;
-    wire [15:0] sum_tmp;
-    wire [15:0] and_tmp;
-    wire [15:0] out_tmp;
-    wire [15:0] notout_tmp;
-    wire [15:0] out_buf;
+    wire [`DataWidth-1:0] zx_tmp;
+    wire [`DataWidth-1:0] x_tmp;
+    wire [`DataWidth-1:0] zy_tmp;
+    wire [`DataWidth-1:0] y_tmp;
+    wire [`DataWidth-1:0] sum_tmp;
+    wire [`DataWidth-1:0] and_tmp;
+    wire [`DataWidth-1:0] out_tmp;
+    wire [`DataWidth-1:0] out_buf;
     assign out_o = out_buf;
 
     // deal with zx, nx, get new x : x_tmp
-    assign zx_tmp = zx_i ? 16'b0 : x_i;
-    assign notx_tmp = ~zx_tmp;
-    assign x_tmp = nx_i ? notx_tmp : zx_tmp;
+    assign zx_tmp = zx_i ? `ZeroWord : x_i;
+    assign x_tmp = nx_i ? ~zx_tmp : zx_tmp;
 
     // deal with zy, ny, get new y : y_tmp 
-    assign zy_tmp = zy_i ? 16'b0 : y_i;
-    assign noty_tmp = ~zy_tmp;
-    assign y_tmp = ny_i ? noty_tmp : zy_tmp;
+    assign zy_tmp = zy_i ? `ZeroWord : y_i;
+    assign y_tmp = ny_i ? ~zy_tmp : zy_tmp;
 
     // deal with f, get x+y or x&y
     assign sum_tmp = x_tmp + y_tmp;
@@ -82,8 +78,7 @@ module ALU(
     assign out_tmp = f_i ? sum_tmp : and_tmp;
 
     // deal with no, get out_buf
-    assign notout_tmp = ~out_tmp;
-    assign out_buf = no_i ? notout_tmp : out_tmp;
+    assign out_buf = no_i ? ~out_tmp : out_tmp;
 
     // get zr
     assign zr_o = ~(|out_buf);

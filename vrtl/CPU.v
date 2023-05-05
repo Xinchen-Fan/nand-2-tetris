@@ -56,7 +56,7 @@ CPU u_CPU(
     assign y_alu = inst_i[12] ? data_i : a_reg_out; // choose ALU input
     
 
-    ALU u_ALU(
+    alu u_alu(
         .x_i(x_alu), .y_i(y_alu),
         .zx_i(inst_i[11]), .nx_i(inst_i[10]), .zy_i(inst_i[9]), .ny_i(inst_i[8]),
         .f_i(inst_i[7]), .no_i(inst_i[6]), .out_o(alu_out_buf), .zr_o(zr_alu), .ng_o(ng_alu)
