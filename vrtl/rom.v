@@ -5,11 +5,6 @@ module rom(
 
     // 32K rom (32768)
     reg [15:0] _rom [0:32768-1];
-
-    // always @ (*) begin
-    //     data_o = _rom[addr_i[14:0]];
-    // end
-
     assign data_o = _rom[addr_i];
 
 

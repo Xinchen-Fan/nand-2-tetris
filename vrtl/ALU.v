@@ -67,23 +67,23 @@ module ALU(
     assign out_o = out_buf;
 
     // deal with zx, nx, get new x : x_tmp
-    Mux16 u1_Mux16(.a_i(x_i), .b_i(16'b0), .sel_i(zx_i), .out_o(zx_tmp));
-    Not16 u2_Not16(.in_i(zx_tmp), .out_o(notx_tmp));
-    Mux16 u3_Mux16(.a_i(zx_tmp), .b_i(notx_tmp), .sel_i(nx_i), .out_o(x_tmp));
+    assign zx_tmp = zx_i ? 16'b0 : x_i;
+    assign notx_tmp = ~zx_tmp;
+    assign x_tmp = nx_i ? notx_tmp : zx_tmp;
 
     // deal with zy, ny, get new y : y_tmp 
-    Mux16 u4_Mux16(.a_i(y_i), .b_i(16'b0), .sel_i(zy_i), .out_o(zy_tmp));
-    Not16 u5_Not16(.in_i(zy_tmp), .out_o(noty_tmp));
-    Mux16 u6_Mux16(.a_i(zy_tmp), .b_i(noty_tmp), .sel_i(ny_i), .out_o(y_tmp));
+    assign zy_tmp = zy_i ? 16'b0 : y_i;
+    assign noty_tmp = ~zy_tmp;
+    assign y_tmp = ny_i ? noty_tmp : zy_tmp;
 
     // deal with f, get x+y or x&y
-    Add16 u7_Add16(.a_i(x_tmp), .b_i(y_tmp), .out_o(sum_tmp));
-    And16 u8_And16(.a_i(x_tmp), .b_i(y_tmp), .out_o(and_tmp));
-    Mux16 u9_Mux16(.a_i(and_tmp), .b_i(sum_tmp), .sel_i(f_i), .out_o(out_tmp));
+    assign sum_tmp = x_tmp + y_tmp;
+    assign and_tmp = x_tmp & y_tmp;
+    assign out_tmp = f_i ? sum_tmp : and_tmp;
 
     // deal with no, get out_buf
-    Not16 u10_Not16(.in_i(out_tmp), .out_o(notout_tmp));
-    Mux16 u11_Mux16(.a_i(out_tmp), .b_i(notout_tmp), .sel_i(no_i), .out_o(out_buf));
+    assign notout_tmp = ~out_tmp;
+    assign out_buf = no_i ? notout_tmp : out_tmp;
 
     // get zr
     assign zr_o = ~(|out_buf);

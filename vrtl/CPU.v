@@ -65,8 +65,8 @@ CPU u_CPU(
 
     // Mux16 u1_Mux16(.a_i(inst_i), .b_i(alu_out_buf), .sel_i(inst_i[15]), .out_o(a_reg_in)); 
     // Mux16 u2_Mux16(.a_i(a_reg_out), .b_i(data_i), .sel_i(inst_i[12]), .out_o(y_alu)); 
-    Register u_ARegister(.clk_i(clk_i), .in_i(a_reg_in), .load_i(a_reg_load), .out_o(a_reg_out)); // A-Register
-    Register u_DRegister(.clk_i(clk_i), .in_i(alu_out_buf), .load_i(d2), .out_o(x_alu)); // D-Register
+    Register #(16, 16'b0) u_ARegister(.clk_i(clk_i), .in_i(a_reg_in), .reset_i(reset), .load_i(a_reg_load), .out_o(a_reg_out)); // A-Register
+    Register #(16, 16'b0) u_DRegister(.clk_i(clk_i), .in_i(alu_out_buf), .reset_i(reset), .load_i(d2), .out_o(x_alu)); // D-Register
     
     PC u_PC(
         .clk_i(clk_i), 

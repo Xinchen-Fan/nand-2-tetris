@@ -34,12 +34,12 @@ PC u_PC(
     wire [15:0] out_buf;
     assign out_o = out_buf;
 
-    Inc16 u_Inc16(.in_i(out_buf), .out_o(in_inc));
-    Mux16 u1_Mux16(.a_i(out_buf), .b_i(in_inc), .sel_i(inc_i), .out_o(in_tmp1));
-    Mux16 u2_Mux16(.a_i(in_tmp1), .b_i(in_i), .sel_i(load_i), .out_o(in_tmp2));
-    Mux16 u3_Mux16(.a_i(in_tmp2), .b_i(16'b0), .sel_i(reset_i), .out_o(in_new));
+    assign in_inc = out_buf + 1'b1; // pc+1
+    assign in_tmp1 = inc_i ? in_inc : out_buf; // +1 or hold
+    assign in_tmp2 = load_i ? in_i : in_tmp1;  // load or (+1 or hold)
+    // assign in_new = reset_i ? 16'b0 : in_tmp2; // reset or (load or (+1 or hold))
 
-    Register u_Register(.clk_i(clk_i), .in_i(in_new), .load_i(1'b1), .out_o(out_buf));
+    Register #(16, 16'b0) u_Register(.clk_i(clk_i), .in_i(in_tmp2), .reset_i(reset_i), .load_i(1'b1), .out_o(out_buf));
 
 
 endmodule
