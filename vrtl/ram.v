@@ -11,20 +11,21 @@ ram u_ram(
 
 */
 
+`include "defines.v"
 
 module ram(
 
     input wire clk_i,
     input wire reset_i,
     input wire load_i,           // write enable
-    input wire [14:0] addr_i,    // addr
-    input wire [15:0] data_i,
-    output wire [15:0] data_o         // read data
+    input wire [`DataAddrWidth-1:0] addr_i,    // addr
+    input wire [`DataWidth-1:0] data_i,
+    output wire [`DataWidth-1:0] data_o         // read data
 
     );
 
     // 32K(32768) ram 
-    reg [15:0] _ram [0:32768-1];
+    reg [`DataWidth-1:0] _ram [0:`DataDepth-1];
 
 
     always @ (posedge clk_i) begin
@@ -33,6 +34,6 @@ module ram(
         end
     end
 
-    assign data_o = reset_i ? 16'b0 : _ram[addr_i];
+    assign data_o = reset_i ? `ZeroWord : _ram[addr_i];
 
 endmodule

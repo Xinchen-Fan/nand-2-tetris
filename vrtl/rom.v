@@ -1,10 +1,12 @@
+`include "defines.v"
+
 module rom(
-    input wire [14:0] addr_i,    // addr
-    output wire [15:0] data_o     // read data
+    input wire [`InstAddrWidth-1:0] addr_i,    // addr
+    output wire [`InstWidth-1:0] data_o     // read data
     );
 
     // 32K rom (32768)
-    reg [15:0] _rom [0:32768-1];
+    reg [`InstWidth-1:0] _rom [0:`InstDepth-1];
     assign data_o = _rom[addr_i];
 
 
