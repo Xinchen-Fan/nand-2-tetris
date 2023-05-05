@@ -26,7 +26,7 @@ module top_tb();
     end
 
     initial begin
-        $readmemb("vtest/program.hack", u_top.u_rom._rom);
+        $readmemb("vtest/inst.hack", u_top.u_rom._rom);
     end
 
     initial begin
